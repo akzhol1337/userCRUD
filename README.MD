@@ -4,7 +4,12 @@
 Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
 
 to access database console
-<code>localhost:port/h2-console</code>
+<code>localhost:port/h2-console</code><br>
+Console credentials:<br>
+<code>
+username: admin  <br>
+password: password <br>
+</code>
 </p>
 
 <h3>How to run docker image:</h3>
