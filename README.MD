@@ -9,12 +9,13 @@ Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
 
 <ul>
     <li>docker pull holymolly/usercrud</li>
-    <li>docker run holymolly/usercrud</li>
+    <li>docker run -p 8888:8080 holymolly/usercrud</li>
 </ul>
 
 <h3>API</h3>
 <ul>
     <code>POST</code> Adding new user <br>
+    <p>If you running on docker, port should be <code>8888</code> </p>
 
     localhost:8080/add
     
@@ -58,6 +59,7 @@ Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
     
 
 </ul>
+
 
 
 

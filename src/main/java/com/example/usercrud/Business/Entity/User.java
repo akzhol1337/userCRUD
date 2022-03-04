@@ -40,7 +40,6 @@ public class User {
             name="country",
             columnDefinition = "TEXT"
     )
-    @NotEmpty(message="Country must not be empty")
     private String country;
     @Column(
             name="gender",
