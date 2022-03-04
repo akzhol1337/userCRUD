@@ -3,21 +3,25 @@
 <p> REST API for create/read/update/delete users <br>
 Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
 
-to access database console
+<h4>To access database console</h4>
+
 <code>localhost:port/h2-console</code><br>
 Console credentials:<br>
-<code>
-username: admin  <br>
-password: password <br>
-</code>
+
+
+<code>Saved Settings: Generic H2(Embedded)</code><br>
+<code>Driver Class: org.h2.Driver</code><br>
+<code>JDBC URL: jdbc:h2:file:./src/main/java/com/example/usercrud/Database/Database </code></br>
+<code>username: admin  <br></code>
+<code>password: password <br></code>
+
+<h5>To enter test db:</h5> <br> <code>JDBC URL: jdbc:h2:file:./src/test/java/com/example/usercrud/Database/testDatabase <br> </code>
+
 </p>
 
 <h3>How to run docker image:</h3>
-
 <ul>
-    <li>docker pull holymolly/usercrud</li>
     <li>docker run -p 8888:8080 holymolly/usercrud</li>
-
 </ul>
 
 <h3>API</h3>
