@@ -27,20 +27,6 @@ public class UserController {
         return m.matches();
     }
 
-    @GetMapping("/lol")
-    public void kek(HttpServletRequest request) throws JsonProcessingException {
-        String userIP = "84.240.214.26";
-        System.out.println(userIP);
-
-
-        RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject("http://ip-api.com/json/" + userIP + "?fields=status,country", String.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        Map map = mapper.readValue(result, Map.class);
-        System.out.println((String) map.get("country"));
-
-    }
 
     @PostMapping("/add")
     public ResponseEntity addUser(@RequestBody User user, HttpServletRequest request) throws JsonProcessingException {
