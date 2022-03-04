@@ -3,6 +3,8 @@
 <p> REST API for create/read/update/delete users <br>
 Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
 
+to access database console
+<code>localhost:port/h2-console</code>
 </p>
 
 <h3>How to run docker image:</h3>
@@ -10,14 +12,17 @@ Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
 <ul>
     <li>docker pull holymolly/usercrud</li>
     <li>docker run -p 8888:8080 holymolly/usercrud</li>
+
 </ul>
 
 <h3>API</h3>
 <ul>
     <code>POST</code> Adding new user <br>
-    <p>If you running on docker, port should be <code>8888</code> </p>
+    <p>If you running on docker, port should be <code>8888</code><br>
+    otherwise <code>8080</code>
+    </p>
 
-    localhost:8080/add
+    localhost:port/add
     
     Request Body:
     {
@@ -32,19 +37,19 @@ Used Spring boot, H2 relation database, Hibernate Data JPA, JUnit
     
 <code>GET</code> Getting user by id/email
     
-    localhost:8080/id/{id}
+    localhost:port/id/{id}
 
-    localhost:8080/email/{email}
+    localhost:port/email/{email}
 <code>DELETE</code> Deleting user by id/email
 
-    localhost:8080/id/{id}
+    localhost:port/id/{id}
 
-    localhost:8080/email/{email}
+    localhost:port/email/{email}
 <code>PUT</code> Updating user by id/email
     
-    localhost:8080/id/{id}
+    localhost:port/id/{id}
 
-    localhost:8080/email/{email}
+    localhost:port/email/{email}
     
     Request Body:
     {
