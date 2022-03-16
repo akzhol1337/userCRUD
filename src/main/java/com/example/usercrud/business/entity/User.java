@@ -1,4 +1,4 @@
-package com.example.usercrud.Business.Entity;
+package com.example.usercrud.business.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,6 +26,8 @@ public class User {
             name="first_name",
             columnDefinition = "TEXT"
     )
+    @NotEmpty(message = "First name should not be empty")
+    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
     private String firstName;
     @Column(
             name="last_name",
@@ -45,11 +49,14 @@ public class User {
             name="gender",
             columnDefinition = "SMALLINT"
     )
+    @NotNull
     private Short gender;
     @Column(
             name="email",
-            columnDefinition = "TEXT"
-
+            updatable=false,
+            unique = true
     )
+    @NotEmpty(message = "Email should not be empty")
+    @Email(message = "Email should be valid")
     private String email;
 }

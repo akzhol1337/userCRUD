@@ -1,23 +1,20 @@
-package com.example.usercrud.Business.Service;
+package com.example.usercrud.business.service;
 
-import com.example.usercrud.Business.Entity.User;
-import com.example.usercrud.Persistance.Repository.UserRepository;
-import org.aspectj.lang.annotation.Before;
+import com.example.usercrud.business.entity.User;
+import com.example.usercrud.persistance.repository.UserRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.TestPropertySource;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@Transactional
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 class UserServiceTest {
 
@@ -35,10 +32,10 @@ class UserServiceTest {
         Long id = -1L;
 
         //when
-        Optional<User> expectedEmpty = userServiceTest.deleteById(id);
+        Boolean expectedFalse = userServiceTest.deleteById(id);
 
         //then
-        assertThat(expectedEmpty).isEmpty();
+        assertThat(expectedFalse).isFalse();
     }
     @Test
     @DisplayName("Delete existing user by id")
@@ -48,10 +45,10 @@ class UserServiceTest {
         userRepoTest.save(user);
 
         //when
-        Optional<User> exceptedPresent = userServiceTest.deleteById(1L);
+        Boolean exceptedTrue = userServiceTest.deleteById(1L);
 
         //then
-        assertThat(exceptedPresent).isPresent();
+        assertThat(exceptedTrue).isTrue();
     }
 
     @Test
@@ -61,10 +58,10 @@ class UserServiceTest {
         String notExistingEmail = "notexisting@email.email";
 
         //when
-        Optional<User> expectedEmpty = userServiceTest.deleteByEmail(notExistingEmail);
+        Boolean expectedFalse = userServiceTest.deleteByEmail(notExistingEmail);
 
         //then
-        assertThat(expectedEmpty).isEmpty();
+        assertThat(expectedFalse).isFalse();
     }
 
 
@@ -76,10 +73,10 @@ class UserServiceTest {
         userRepoTest.save(user);
 
         //when
-        Optional<User> exceptedPresent = userServiceTest.deleteByEmail("email@email.email");
+        Boolean exceptedTrue = userServiceTest.deleteByEmail("email@email.email");
 
         //then
-        assertThat(exceptedPresent).isPresent();
+        assertThat(exceptedTrue).isTrue();
     }
 
     @Test

@@ -1,25 +1,25 @@
-package com.example.usercrud.Presentation;
+package com.example.usercrud.presentation;
 
-import com.example.usercrud.Business.Entity.User;
-import com.example.usercrud.Business.Service.UserService;
+import com.example.usercrud.business.entity.User;
+import com.example.usercrud.business.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.validation.ConstraintViolationException;
 import java.util.Map;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -81,19 +81,11 @@ class UserControllerTest {
     }
 
     @Test
-    @DisplayName("Adding new user with invalid email")
-    void itShouldAddUserWithInvalidEmail() throws Exception {
-        User user = new User(null, "firstName", "secondname", "middlename", "country", (short) 0, "email");
-        userService.addUser(user);
-        this.mockMvc.perform(post("/add").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user))).andDo(print()).andExpect(status().isBadRequest());
-    }
-
-    @Test
     @DisplayName("Getting existing user by id")
     void itShouldGetExistingUserByID() throws Exception {
         User newUser = new User(null, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
-        this.mockMvc.perform(get("/id/" + user.getId())).andDo(print()).andExpect(status().isOk());
+        Optional<User> user = userService.addUser(newUser);
+        this.mockMvc.perform(get("/id/" + user.get().getId())).andDo(print()).andExpect(status().isOk());
     }
 
     @Test
@@ -106,7 +98,7 @@ class UserControllerTest {
     @DisplayName("Getting existing user by email")
     void itShouldGetExistingUserByEmail() throws Exception {
         User newUser = new User(null, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
+        User user = userService.addUser(newUser).get();
         this.mockMvc.perform(get("/email/" + user.getEmail())).andDo(print()).andExpect(status().isOk());
     }
 
@@ -120,7 +112,7 @@ class UserControllerTest {
     @DisplayName("Delete existing user by id")
     void itShouldDeleteExistingUserById() throws Exception {
         User newUser = new User(null, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
+        User user = userService.addUser(newUser).get();
         this.mockMvc.perform(delete("/id/" + user.getId())).andDo(print()).andExpect(status().isOk());
     }
 
@@ -134,7 +126,7 @@ class UserControllerTest {
     @DisplayName("Delete existing user by email")
     void itShouldDeleteExistingUserByEmail() throws Exception {
         User newUser = new User(null, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
+        User user = userService.addUser(newUser).get();
         this.mockMvc.perform(delete("/email/" + user.getEmail())).andDo(print()).andExpect(status().isOk());
     }
 
@@ -148,7 +140,7 @@ class UserControllerTest {
     @DisplayName("Update existing user by id")
     void itShouldUpdateExistingUserById() throws Exception {
         User newUser = new User(1L, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
+        User user = userService.addUser(newUser).get();
         user.setFirstName("newFirstName");
         user.setLastName("newLastName");
         user.setGender((short)1);
@@ -183,7 +175,7 @@ class UserControllerTest {
     @DisplayName("Update existing user by email")
     void itShouldUpdateExistingUserByEmail() throws Exception {
         User newUser = new User(1L, "firstName", "secondname", "middlename", "country", (short) 0, "email@email.email");
-        User user = userService.addUser(newUser);
+        User user = userService.addUser(newUser).get();
         user.setFirstName("newFirstName");
         user.setLastName("newLastName");
         user.setGender((short)1);
