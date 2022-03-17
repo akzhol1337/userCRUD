@@ -24,7 +24,6 @@ public class UserController {
 
     @PostMapping("/user")
     public ResponseEntity addUser(@RequestBody @Valid User user, BindingResult bindingResult, HttpServletRequest request) throws Exception {
-        System.out.println(user.toString());
         if(bindingResult.hasErrors()){
             Map<String, String> errorMessages = new HashMap<>();
             bindingResult.getFieldErrors().forEach(err -> errorMessages.put(err.getField(), err.getDefaultMessage()));
@@ -44,8 +43,6 @@ public class UserController {
             log.info("Successfully deleted user with id: {}", id);
             return (ResponseEntity) ResponseEntity.ok(Collections.singletonMap("success", "Deleted user with id " + id));
         }
-
-        System.out.println("Akzhol");
         log.warn("Tried to delete nonexistent user with id: {}", id);
         return ResponseEntity.badRequest().body(Collections.singletonMap("error", "User with id " + id + " doesn't exist"));
     }
@@ -99,7 +96,6 @@ public class UserController {
     @PutMapping("/user/email/{email}")
     public ResponseEntity updateUserByEmail(@PathVariable String email, @RequestBody User newUser){
         Optional<User> user = userService.updateByEmail(email, newUser);
-        System.out.println(user.isEmpty());
         if(user.isEmpty()){
             log.warn("Tried to update nonexistent user with email: {}", email);
             return ResponseEntity.badRequest().body(Collections.singletonMap("error", "User with email " + email + " doesn't exist"));

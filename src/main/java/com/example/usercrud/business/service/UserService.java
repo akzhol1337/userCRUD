@@ -39,7 +39,6 @@ public class UserService {
             user.setCountry("Kazakhstan");
         } else {
             String result = restTemplate.getForObject("http://ip-api.com/json/" + userIP + "?fields=status,country", String.class);
-            System.out.println(userIP);
             ObjectMapper mapper = new ObjectMapper();
             Map map = mapper.readValue(result, Map.class);
 
