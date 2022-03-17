@@ -41,7 +41,7 @@ class UserServiceTest {
     @DisplayName("Delete existing user by id")
     void itShouldDeleteExistingUserById(){
         //given
-        User user = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, "email@email.email");
+        User user = new User(1L, "firstname", "secondname", "middlename", "country", 1, "email@email.email");
         userRepoTest.save(user);
 
         //when
@@ -69,7 +69,7 @@ class UserServiceTest {
     @DisplayName("Delete existing user by email")
     void itShouldDeleteExistingUserByEmail() {
         //given
-        User user = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, "email@email.email");
+        User user = new User(1L, "firstname", "secondname", "middlename", "country", 1, "email@email.email");
         userRepoTest.save(user);
 
         //when
@@ -97,7 +97,7 @@ class UserServiceTest {
     void itShouldCheckIfExistingUserExistsByEmail() {
         //given
         String existingEmail = "email@email.email";
-        User user = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, existingEmail);
+        User user = new User(1L, "firstname", "secondname", "middlename", "country", 1, existingEmail);
         userServiceTest.addUser(user);
 
         //when
@@ -112,7 +112,7 @@ class UserServiceTest {
     void itShouldUpdateNotExistingUserByEmail() {
         //given
         String notExistingEmail = "notexisting@email.email";
-        User notExistingUser = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, notExistingEmail);
+        User notExistingUser = new User(1L, "firstname", "secondname", "middlename", "country", 1, notExistingEmail);
 
         //when
         Optional<User> exceptedEmpty = userServiceTest.updateByEmail(notExistingEmail, notExistingUser);
@@ -126,13 +126,13 @@ class UserServiceTest {
     void itShouldUpdateExistingUserByEmail() {
         //given
         String existingEmail = "existing@email.email";
-        User existingUser = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, existingEmail);
+        User existingUser = new User(1L, "firstname", "secondname", "middlename", "country", 1, existingEmail);
         userServiceTest.addUser(existingUser);
         existingUser.setFirstName("newFirstName");
         existingUser.setLastName("newLastName");
         existingUser.setMiddleName("newMiddleName");
         existingUser.setEmail("newEmail");
-        existingUser.setGender((short)1);
+        existingUser.setGender(1);
 
         //when
         Optional<User> exceptedPresent = userServiceTest.updateByEmail(existingEmail, existingUser);
@@ -150,7 +150,7 @@ class UserServiceTest {
     @DisplayName("Update not existing user by id")
     void itShouldUpdateNotExistingUserById() {
         Long notExistingId = 1L;
-        User notExistingUser = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, "notexist@email.email");
+        User notExistingUser = new User(1L, "firstname", "secondname", "middlename", "country", 1, "notexist@email.email");
 
         //when
         Optional<User> exceptedEmpty = userServiceTest.updateById(notExistingId, notExistingUser);
@@ -164,13 +164,13 @@ class UserServiceTest {
     void itShouldUpdateExistingUserById() {
         //given
         Long existingId = 1L;
-        User existingUser = new User(1L, "firstname", "secondname", "middlename", "country", (short) 0, "existingEmail@email.email");
+        User existingUser = new User(1L, "firstname", "secondname", "middlename", "country", 1, "existingEmail@email.email");
         userServiceTest.addUser(existingUser);
         existingUser.setFirstName("newFirstName");
         existingUser.setLastName("newLastName");
         existingUser.setMiddleName("newMiddleName");
         existingUser.setEmail("newEmail");
-        existingUser.setGender((short)1);
+        existingUser.setGender(1);
 
         //when
         Optional<User> exceptedPresent = userServiceTest.updateById(existingId, existingUser);

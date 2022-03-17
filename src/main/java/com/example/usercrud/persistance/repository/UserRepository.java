@@ -1,6 +1,7 @@
 package com.example.usercrud.persistance.repository;
 
 import com.example.usercrud.business.entity.User;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -15,4 +16,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     void deleteByEmail(String email);
     List<User> findAllByCountry(String country, Pageable pageable);
     List<User> findAllByCountry(String country);
+    List<User> findAll();
+    Page<User> findAll(Pageable pageable);
 }

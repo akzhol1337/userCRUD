@@ -27,7 +27,7 @@ Console credentials:<br>
 <h3>API</h3>
 <ul>
     <code>POST</code> Adding new user <br>
-    <p>If you running on docker, port should be <code>8888</code><br>
+    <p>If you're running on docker, port should be <code>8888</code><br>
     otherwise <code>8080</code>
     </p>
 
@@ -42,35 +42,49 @@ Console credentials:<br>
         "gender": 0
     }
 
-    [lastName, middleName] is not necessary
+    firstName, gender, email is required fields
+    gender's value: [0-10]
     
 <code>GET</code> Getting user by id/email
     
-    localhost:port/id/{id}
+    localhost:port/user/id/{id}
 
-    localhost:port/email/{email}
+    localhost:port/user/email/{email}
 <code>DELETE</code> Deleting user by id/email
 
-    localhost:port/id/{id}
+    localhost:port/user/id/{id}
 
-    localhost:port/email/{email}
+    localhost:port/user/email/{email}
 <code>PUT</code> Updating user by id/email
     
-    localhost:port/id/{id}
+    localhost:port/user/id/{id}
 
-    localhost:port/email/{email}
+    localhost:port/user/email/{email}
     
     Request Body:
     {
         "firstName": "newName",
         "lastName": "newLastName",
         "middleName": "newMiddleName",
+        "country": "someCountry",
         "email": "newEmail@gmail.com",
         "gender": 1
     }
+<code>GET</code> Get all users filtered by country
 
-    you can set only fields that needs to be updated
-    
+    localhost:port/users/{country}
+
+<code>GET</code> Get one page of all users filtered by country
+
+    localhost:port/users/{country}/{pageNumber}/{pageSize}
+
+<code>GET</code> Get all users
+
+    localhost:port/users/
+
+<code>GET</code> Get one page of all users
+
+    localhost:port/users/{pageNumber}/{pageSize}
 
 </ul>
 

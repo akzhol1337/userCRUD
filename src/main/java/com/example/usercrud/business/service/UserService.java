@@ -5,6 +5,7 @@ import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -22,7 +23,7 @@ import java.util.Optional;
 @Transactional
 public class UserService {
     final UserRepository userRepo;
-    RestTemplate restTemplate;
+    final RestTemplate restTemplate;
 
     public Optional<User> addUser(User user){
         Optional<User> newUser = Optional.empty();
@@ -38,12 +39,13 @@ public class UserService {
             user.setCountry("Kazakhstan");
         } else {
             String result = restTemplate.getForObject("http://ip-api.com/json/" + userIP + "?fields=status,country", String.class);
-
+            System.out.println(userIP);
             ObjectMapper mapper = new ObjectMapper();
             Map map = mapper.readValue(result, Map.class);
 
-            if(map.get("status") == "fail"){
-                user.setCountry("undefined");
+            if(map.get("status").equals("fail")){
+                // if it's private ip
+                user.setCountry("Kazakhstan");
             } else {
                 user.setCountry((String) map.get("country"));
             }
@@ -96,12 +98,20 @@ public class UserService {
         return user;
     }
 
-    public List<User> getPage(String country, Integer pageNumber, Integer pageSize){
+    public List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize){
         return userRepo.findAllByCountry(country, PageRequest.of(pageNumber, pageSize));
     }
 
-    public List<User> getAll(String country){
+    public List<User> getAllByCountry(String country){
         return userRepo.findAllByCountry(country);
+    }
+
+    public Page<User> getPage(Integer pageNumber, Integer pageSize){
+        return userRepo.findAll(PageRequest.of(pageNumber, pageSize));
+    }
+
+    public List<User> getAll(){
+        return userRepo.findAll();
     }
 
     public Optional<User> updateById(Long id, User newUser){

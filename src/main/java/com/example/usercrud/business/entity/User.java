@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -50,7 +47,9 @@ public class User {
             columnDefinition = "SMALLINT"
     )
     @NotNull
-    private Short gender;
+    @Min(0)
+    @Max(10)
+    private Integer gender;
     @Column(
             name="email",
             updatable=false,
