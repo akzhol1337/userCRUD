@@ -33,7 +33,7 @@ class UserControllerTestGroovy extends Specification{
 
     private testUser = new User(1L, "firstName", "lastName", "middleName", "country", 1, "email@email.email")
 
-    private def asJsonString(Object obj){
+    private static asJsonString(Object obj){
         try {
             return new ObjectMapper().writeValueAsString(obj);
         } catch (Exception e) {
@@ -76,10 +76,10 @@ class UserControllerTestGroovy extends Specification{
 
     def "should return 400 when adding user with incorrect gender"() {
         setup:
-        testIncorrectGenderUser = new User(1L, "firstName", "lastName", "middleName","country", null, "email@email.email")
+        def testIncorrectGenderUser = new User(1L, "firstName", "lastName", "middleName","country", null, "email@email.email")
 
         when:
-        def response = mockMvc.perform(post("/user").contentType(MediaType.APPLICATION_JSON).content(asJsonString(testIncorrectEmailUser))).andReturn().response
+        def response = mockMvc.perform(post("/user").contentType(MediaType.APPLICATION_JSON).content(asJsonString(testIncorrectGenderUser))).andReturn().response
 
         then:
         response.status == HttpStatus.BAD_REQUEST.value()

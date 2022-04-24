@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.presentation.controller.UserControllerTestGroovy" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T23:38:16" hostname="Akzhols-MacBook-Pro.local" time="0.132">
+<testsuite name="com.example.usercrud.presentation.controller.UserControllerTestGroovy" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-24T23:53:02" hostname="Akzhols-MacBook-Pro.local" time="0.151">
   <properties/>
-  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.132"/>
+  <testcase name="should return 200 when adding new user with correct data" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.099"/>
+  <testcase name="should return 400 when adding user with empty first name" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.009"/>
+  <testcase name="should return 400 when adding user with empty email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.004"/>
+  <testcase name="should return 400 when adding user with incorrect gender" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.007"/>
+  <testcase name="should return 400 when adding user with existing email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.003"/>
+  <testcase name="should return 200 for getting existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.004"/>
+  <testcase name="should return 400 for getting un existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.002"/>
+  <testcase name="should return 200 for getting existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.012"/>
+  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.005"/>
   <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -11,13 +19,15 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.4)
 
-05:38:15.836 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Starting UserControllerTestGroovy using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 83832 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
-05:38:15.852 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-05:38:15.853 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - No active profile set, falling back to 1 default profile: "default"
-05:38:16.653 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-05:38:16.653 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-05:38:16.654 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-05:38:16.666 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Started UserControllerTestGroovy in 0.974 seconds (JVM running for 1.718)
+05:53:02.285 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Starting UserControllerTestGroovy using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 84395 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
+05:53:02.285 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - No active profile set, falling back to 1 default profile: "default"
+05:53:02.723 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+05:53:02.724 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+05:53:02.724 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+05:53:02.733 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Started UserControllerTestGroovy in 0.459 seconds (JVM running for 2.678)
+05:53:02.821 [Test worker] INFO  c.e.u.presentation.UserController - Successfully added user with id 1
+05:53:02.865 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with id: 1
+05:53:02.875 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with email: email@email.email
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

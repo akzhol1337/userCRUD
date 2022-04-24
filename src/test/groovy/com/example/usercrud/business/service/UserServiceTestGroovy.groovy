@@ -4,10 +4,13 @@ import com.example.usercrud.business.entity.User
 import com.example.usercrud.persistance.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import org.springframework.boot.test.context.TestConfiguration
+import org.springframework.context.annotation.Bean
 import org.springframework.web.client.RestTemplate
 import spock.lang.Execution
 import spock.lang.Specification
 import spock.lang.Stepwise
+import spock.mock.DetachedMockFactory
 
 @DataJpaTest
 class UserServiceTestGroovy extends Specification {
