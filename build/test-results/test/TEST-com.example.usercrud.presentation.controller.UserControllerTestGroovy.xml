@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.usercrud.presentation.controller.UserControllerTestGroovy" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T23:38:16" hostname="Akzhols-MacBook-Pro.local" time="0.132">
+  <properties/>
+  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTestGroovy" time="0.132"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+05:38:15.836 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Starting UserControllerTestGroovy using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 83832 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
+05:38:15.852 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+05:38:15.853 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - No active profile set, falling back to 1 default profile: "default"
+05:38:16.653 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+05:38:16.653 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+05:38:16.654 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+05:38:16.666 [Test worker] INFO  c.e.u.p.c.UserControllerTestGroovy - Started UserControllerTestGroovy in 0.974 seconds (JVM running for 1.718)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
