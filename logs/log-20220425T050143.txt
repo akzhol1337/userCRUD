@@ -990,7 +990,7 @@ Action:
 
 Consider defining a bean of type 'com.example.usercrud.business.service.UserService' in your configuration.
 
-1067 [Test worker] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c9f0a20] to prepare test instance [com.example.usercrud.presentation.controller.UserControllerTestGroovy@2c708440]
+1067 [Test worker] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c9f0a20] to prepare test instance [com.example.usercrud.presentation.controller.UserControllerTest@2c708440]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)

@@ -18,7 +18,6 @@ configurations {
 }
 
 
-
 repositories {
     mavenCentral()
 }
@@ -37,8 +36,8 @@ dependencies {
     implementation 'ch.qos.logback:logback-core:1.2.10'
     implementation 'org.codehaus.groovy:groovy-all:3.0.10'
     testImplementation 'org.spockframework:spock-spring:2.2-M1-groovy-3.0'
-
-
+    testImplementation "org.testcontainers:spock:1.16.3"
+    testImplementation "org.testcontainers:postgresql:1.16.3"
 
 }
 
