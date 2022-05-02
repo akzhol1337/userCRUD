@@ -190,7 +190,7 @@
 1138 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 1138 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 1138 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-1161 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+1161 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	c.e.u.p.UserController:
 	{DELETE [/user/id/{id}]}: deleteUserById(Long)
 	{GET [/users/{country}]}: getAllUsersByCountry(String)
@@ -203,7 +203,7 @@
 	{GET [/user/id/{id}]}: getUserById(Long)
 	{GET [/user/email/{email}]}: getUserByEmail(String)
 	{POST [/user]}: addUser(User,BindingResult,HttpServletRequest)
-1163 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+1163 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -273,7 +273,7 @@
 1289 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
 1290 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
 1293 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-1293 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: 
+1293 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets:
 1295 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'mockMvc'
 1295 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
 1299 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
@@ -286,7 +286,7 @@
 1299 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
 1300 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dispatcherServlet'
 1300 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'dispatcherServlet' via factory method to bean named 'mockMvc'
-1311 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+1311 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================

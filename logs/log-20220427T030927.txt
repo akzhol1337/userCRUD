@@ -25,7 +25,7 @@
 904  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
 904  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
 1027 [Test worker] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in com.example.usercrud.presentation.controller.UserControllerTest$Config: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userControllerTest.Config; factoryMethodName=userService; initMethodName=null; destroyMethodName=(inferred); defined in com.example.usercrud.presentation.controller.UserControllerTest$Config] for bean 'userService': There is already [Generic bean: class [com.example.usercrud.business.service.UserService]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/business/service/UserService.class]] bound.
-1036 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+1036 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================
@@ -860,7 +860,7 @@ org.springframework.beans.factory.support.BeanDefinitionOverrideException: Inval
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-1047 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+1047 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
 
 ***************************
 APPLICATION FAILED TO START
@@ -886,7 +886,7 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 1068 [Test worker] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/persistance/repository/UserRepository.class]
 1069 [Test worker] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/presentation/UserController.class]
 1102 [Test worker] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in com.example.usercrud.presentation.controller.UserControllerTest$Config: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userControllerTest.Config; factoryMethodName=userService; initMethodName=null; destroyMethodName=(inferred); defined in com.example.usercrud.presentation.controller.UserControllerTest$Config] for bean 'userService': There is already [Generic bean: class [com.example.usercrud.business.service.UserService]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/business/service/UserService.class]] bound.
-1104 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+1104 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================
@@ -1720,7 +1720,7 @@ org.springframework.beans.factory.support.BeanDefinitionOverrideException: Inval
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-1104 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+1104 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
 
 ***************************
 APPLICATION FAILED TO START

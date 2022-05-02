@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-27T07:19:25" hostname="Akzhols-MacBook-Pro.local" time="0.508">
+<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-05-02T07:15:16" hostname="Akzhols-MacBook-Pro.local" time="0.435">
   <properties/>
-  <testcase name="should return 200 when adding new user with correct data" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.289"/>
-  <testcase name="should return 400 when adding user with empty first name" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.013"/>
-  <testcase name="should return 400 when adding user with empty email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.013"/>
-  <testcase name="should return 400 when adding user with incorrect gender" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.02"/>
-  <testcase name="should return 400 when adding user with existing email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.028"/>
-  <testcase name="should return 200 for getting existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.072"/>
-  <testcase name="should return 400 for getting un existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.009"/>
-  <testcase name="should return 200 for getting existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.049"/>
-  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.009"/>
+  <testcase name="should return 200 when adding new user with correct data" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.285"/>
+  <testcase name="should return 400 when adding user with empty first name" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.016"/>
+  <testcase name="should return 400 when adding user with empty email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.011"/>
+  <testcase name="should return 400 when adding user with incorrect gender" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.011"/>
+  <testcase name="should return 400 when adding user with existing email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.025"/>
+  <testcase name="should return 200 for getting existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.039"/>
+  <testcase name="should return 400 for getting un existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.008"/>
+  <testcase name="should return 200 for getting existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.026"/>
+  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.01"/>
   <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,49 +19,49 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.4)
 
-13:19:21.625 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-13:19:21.653 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-13:19:21.893 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-13:19:21.894 [Test worker] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
-13:19:21.928 [Test worker] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+13:15:13.066 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+13:15:13.078 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+13:15:13.293 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+13:15:13.294 [Test worker] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+13:15:13.326 [Test worker] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
   Server Version: 20.10.12
   API Version: 1.41
   Operating System: Docker Desktop
   Total Memory: 1988 MB
-13:19:21.930 [Test worker] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-13:19:22.455 [Test worker] INFO  o.testcontainers.DockerClientFactory - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-13:19:22.455 [Test worker] INFO  o.testcontainers.DockerClientFactory - Checking the system...
-13:19:22.455 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
-13:19:22.527 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker environment should have more than 2GB free disk space
-13:19:22.542 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Creating container for image: postgres:latest
-13:19:22.580 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest is starting: 4343eb9edba2f10291a207918b5b4379d51f805def681b695e45a4ba7fff47ed
-13:19:23.678 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest started in PT1.150036S
-13:19:23.694 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Starting UserControllerTest using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 5327 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
-13:19:23.694 [Test worker] INFO  c.e.u.p.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
-13:19:23.953 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:19:23.979 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
-13:19:24.244 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
-13:19:24.248 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
-13:19:24.248 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-13:19:24.248 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
-13:19:24.303 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-13:19:24.303 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 597 ms
-13:19:24.432 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
-13:19:24.512 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-13:19:24.560 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-13:19:24.683 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-13:19:24.693 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-13:19:25.000 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-13:19:25.004 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-13:19:25.490 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring TestDispatcherServlet ''
-13:19:25.490 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-13:19:25.490 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
-13:19:25.501 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
-13:19:25.508 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 59163 (http) with context path ''
-13:19:25.514 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Started UserControllerTest in 4.002 seconds (JVM running for 4.89)
-13:19:25.766 [Test worker] INFO  c.e.u.presentation.UserController - Successfully added user with id 1
-13:19:25.935 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with id: 3
-13:19:25.995 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with email: email@email.email
+13:15:13.329 [Test worker] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+13:15:13.760 [Test worker] INFO  o.testcontainers.DockerClientFactory - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+13:15:13.760 [Test worker] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+13:15:13.760 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+13:15:13.841 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker environment should have more than 2GB free disk space
+13:15:13.857 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Creating container for image: postgres:latest
+13:15:13.891 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest is starting: 2da61c27dfb384be066ea7df3cc12ba6430723469b4ccd7d2048dfaece287f89
+13:15:14.970 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest started in PT1.129154S
+13:15:14.989 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Starting UserControllerTest using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 60446 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
+13:15:14.989 [Test worker] INFO  c.e.u.p.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+13:15:15.230 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:15:15.252 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+13:15:15.545 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+13:15:15.552 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+13:15:15.552 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:15:15.552 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+13:15:15.611 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:15:15.612 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 614 ms
+13:15:15.733 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+13:15:15.749 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13:15:15.792 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:15:15.907 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:15:15.915 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+13:15:16.123 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13:15:16.126 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:15:16.607 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring TestDispatcherServlet ''
+13:15:16.607 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+13:15:16.608 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+13:15:16.618 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+13:15:16.623 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 54051 (http) with context path ''
+13:15:16.630 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Started UserControllerTest in 3.664 seconds (JVM running for 4.721)
+13:15:16.873 [Test worker] INFO  c.e.u.presentation.UserController - Successfully added user with id 1
+13:15:17.018 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with id: 3
+13:15:17.047 [Test worker] INFO  c.e.u.presentation.UserController - Successfully get user with email: email@email.email
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

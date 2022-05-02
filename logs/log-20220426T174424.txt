@@ -155,7 +155,7 @@
 1156 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 1156 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 1156 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-1172 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+1172 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	c.e.u.p.UserController:
 	{POST [/user]}: addUser(User,BindingResult,HttpServletRequest)
 	{DELETE [/user/id/{id}]}: deleteUserById(Long)
@@ -168,7 +168,7 @@
 	{PUT [/user/email/{email}]}: updateUserByEmail(String,User)
 	{GET [/user/id/{id}]}: getUserById(Long)
 	{GET [/user/email/{email}]}: getUserByEmail(String)
-1174 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+1174 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -238,7 +238,7 @@
 1290 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
 1291 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
 1295 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-1295 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: 
+1295 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets:
 1297 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'mockMvc'
 1297 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
 1301 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
@@ -251,7 +251,7 @@
 1301 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
 1303 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dispatcherServlet'
 1303 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'dispatcherServlet' via factory method to bean named 'mockMvc'
-1313 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+1313 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================
@@ -607,7 +607,7 @@ Unconditional classes:
 1387 [Test worker] WARN  o.t.u.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/Users/rockkstar/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /Users/rockkstar/.testcontainers.properties (No such file or directory)
 1390 [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Trying out strategy: UnixSocketClientProviderStrategy
 1468 [ducttape-0] DEBUG o.t.d.DockerClientProviderStrategy - Pinging docker daemon...
-1475 [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+1475 [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 1482 [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
 1484 [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 1487 [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -671,7 +671,7 @@ Unconditional classes:
 1592 [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Transport type: 'httpclient5', Docker host: 'unix:///var/run/docker.sock'
 1592 [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
 1596 [Test worker] INFO  o.t.DockerClientFactory - Docker host IP address is localhost
-1596 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+1596 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 1596 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: preparing request execution
 1596 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 1596 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -724,7 +724,7 @@ Unconditional classes:
 1611 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: releasing endpoint
 1611 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1611 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-1612 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+1612 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 1612 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000003: preparing request execution
 1613 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 1613 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -779,7 +779,7 @@ Unconditional classes:
 1630 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: releasing endpoint
 1630 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1630 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-1630 [Test worker] INFO  o.t.DockerClientFactory - Connected to docker: 
+1630 [Test worker] INFO  o.t.DockerClientFactory - Connected to docker:
   Server Version: 20.10.12
   API Version: 1.41
   Operating System: Docker Desktop
@@ -844,7 +844,7 @@ Unconditional classes:
 1641 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1641 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
 1646 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Looking up auth config for image: testcontainers/ryuk:0.3.3 at registry: index.docker.io
-1646 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix: 
+1646 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix:
 1646 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - registryName [index.docker.io] for dockerImageName [testcontainers/ryuk:0.3.3]
 1646 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Executing docker credential provider: docker-credential-desktop to locate auth config for: index.docker.io
 1648 [Test worker] DEBUG o.t.s.o.z.exec.ProcessExecutor - Executing [docker-credential-desktop, get].

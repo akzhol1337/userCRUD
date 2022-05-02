@@ -4,6 +4,7 @@ import com.example.usercrud.business.entity.User
 import com.example.usercrud.business.service.UserService
 import com.example.usercrud.persistance.repository.UserRepository
 import com.fasterxml.jackson.databind.ObjectMapper
+import groovy.json.JsonSlurper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -32,6 +33,7 @@ class UserControllerTest extends Specification {
         "email@email.email")
 
     private static ObjectMapper mapper = new ObjectMapper()
+    private static jsonSlurper = new JsonSlurper()
 
     @Shared
     private static PostgreSQLContainer postgresContainer = new PostgreSQLContainer("postgres:latest")
@@ -66,8 +68,17 @@ class UserControllerTest extends Specification {
                 .content(mapper.writeValueAsString(testUser)))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.OK.value()
+            response.getContentType() == "application/json"
+            responseBody.id == 1L
+            responseBody.firstName == "firstName"
+            responseBody.lastName == "lastName"
+            responseBody.middleName == "middleName"
+            responseBody.country == "Kazakhstan"
+            responseBody.gender == 1L
+            responseBody.email == "email@email.email"
     }
 
     def "should return 400 when adding user with empty first name"() {
@@ -85,10 +96,12 @@ class UserControllerTest extends Specification {
                 .content(mapper.writeValueAsString(testIncorrectFirstNameUser)))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.firstName == "First name should not be empty"
     }
-
 
     def "should return 400 when adding user with empty email"() {
         given:
@@ -105,8 +118,11 @@ class UserControllerTest extends Specification {
                 .content(mapper.writeValueAsString(testIncorrectEmailUser)))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.email == "Email should not be empty"
     }
 
     def "should return 400 when adding user with incorrect gender"() {
@@ -124,8 +140,11 @@ class UserControllerTest extends Specification {
                 .content(mapper.writeValueAsString(testIncorrectGenderUser)))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.gender == "must not be null"
     }
 
     def "should return 400 when adding user with existing email"() {
@@ -137,8 +156,11 @@ class UserControllerTest extends Specification {
                 .content(mapper.writeValueAsString(testUser)))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.error == "User with email email@email.email already exist"
     }
 
     def "should return 200 for getting existing user by id"() {
@@ -149,8 +171,17 @@ class UserControllerTest extends Specification {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.OK.value()
+            response.getContentType() == "application/json"
+            responseBody.id == id
+            responseBody.firstName == "firstName"
+            responseBody.lastName == "lastName"
+            responseBody.middleName == "middleName"
+            responseBody.country == "country"
+            responseBody.gender == 1L
+            responseBody.email == "email@email.email"
     }
 
     def "should return 400 for getting un existing user by id"() {
@@ -159,20 +190,32 @@ class UserControllerTest extends Specification {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.error == "User with id 1 doesn't exist"
     }
 
     def "should return 200 for getting existing user by email"() {
         given:
-            userRepository.save(testUser)
+            Long id = userService.addUser(testUser).get().getId()
         when:
             def response = mockMvc.perform(get("/user/email/email@email.email")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.OK.value()
+            response.getContentType() == "application/json"
+            responseBody.id == id
+            responseBody.firstName == "firstName"
+            responseBody.lastName == "lastName"
+            responseBody.middleName == "middleName"
+            responseBody.country == "country"
+            responseBody.gender == 1L
+            responseBody.email == "email@email.email"
     }
 
     def "should return 400 for getting un existing user by email"() {
@@ -181,7 +224,10 @@ class UserControllerTest extends Specification {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .response
+            def responseBody = jsonSlurper.parseText(response.getContentAsString())
         then:
             response.status == HttpStatus.BAD_REQUEST.value()
+            response.getContentType() == "application/json"
+            responseBody.error == "User with email email@email.email doesn't exist"
     }
 }

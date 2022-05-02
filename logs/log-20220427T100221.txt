@@ -17,7 +17,7 @@
 694  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
 694  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
 768  [ducttape-0] DEBUG o.t.d.DockerClientProviderStrategy - Pinging docker daemon...
-779  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+779  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 792  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
 795  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 799  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -81,7 +81,7 @@
 903  [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Transport type: 'httpclient5', Docker host: 'unix:///var/run/docker.sock'
 903  [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
 903  [Test worker] INFO  o.t.DockerClientFactory - Docker host IP address is localhost
-903  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+903  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 904  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: preparing request execution
 904  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 904  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -134,7 +134,7 @@
 919  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: releasing endpoint
 919  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection http-outgoing-0 can be kept alive for 3 MINUTES
 919  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-921  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+921  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 921  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000003: preparing request execution
 921  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 921  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -189,7 +189,7 @@
 940  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: releasing endpoint
 940  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection http-outgoing-0 can be kept alive for 3 MINUTES
 940  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-940  [Test worker] INFO  o.t.DockerClientFactory - Connected to docker: 
+940  [Test worker] INFO  o.t.DockerClientFactory - Connected to docker:
   Server Version: 20.10.12
   API Version: 1.41
   Operating System: Docker Desktop
@@ -254,7 +254,7 @@
 960  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection http-outgoing-0 can be kept alive for 3 MINUTES
 960  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
 966  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Looking up auth config for image: testcontainers/ryuk:0.3.3 at registry: index.docker.io
-966  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix: 
+966  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix:
 967  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - registryName [index.docker.io] for dockerImageName [testcontainers/ryuk:0.3.3]
 967  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Executing docker credential provider: docker-credential-desktop to locate auth config for: index.docker.io
 969  [Test worker] DEBUG o.t.s.o.z.exec.ProcessExecutor - Executing [docker-credential-desktop, get].
@@ -1021,12 +1021,12 @@ java.nio.channels.ClosedChannelException: null
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: fixing permissions on existing directory /var/lib/postgresql/data ... ok
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: selecting dynamic shared memory implementation ... posix
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: creating subdirectories ... ok
-1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Data page checksums are disabled.
-1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default text search configuration will be set to "english".
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default database encoding has accordingly been set to "UTF8".
-1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: This user must also own the server process.
 1866 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The files belonging to this database system will be owned by user "postgres".
 1878 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "32[\r][\n]"
@@ -1068,12 +1068,12 @@ java.nio.channels.ClosedChannelException: null
 2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: --auth-local and --auth-host, the next time you run initdb.
 2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: You can change this by editing pg_hba.conf or using the option -A, or
 2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: initdb: warning: enabling "trust" authentication for local connections
-2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:     pg_ctl -D /var/lib/postgresql/data -l logfile start
-2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2413 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Success. You can now start the database server using:
-2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
-2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
+2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2414 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: syncing data to disk ... ok
 2437 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "145[\r][\n]"
 2437 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xffffffd1]waiting for server to start....2022-04-27 04:02:23.086 UTC [48] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit[\n]"
@@ -1125,10 +1125,10 @@ java.nio.channels.ClosedChannelException: null
 2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 2022-04-27 04:02:23.248 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
 2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: waiting for server to shut down....2022-04-27 04:02:23.246 UTC [48] LOG:  aborting any active transactions
 2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 2022-04-27 04:02:23.246 UTC [48] LOG:  received fast shutdown request
-2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
-2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
+2607 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2697 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "25[\r][\n]"
 2697 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x6] done[\n]"
 2697 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xf]server stopped[\n]"
@@ -1140,9 +1140,9 @@ java.nio.channels.ClosedChannelException: null
 2698 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]6PostgreSQL init process complete; ready for start up.[\n]"
 2698 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
 2698 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2709 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2709 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2709 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: PostgreSQL init process complete; ready for start up.
-2709 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2709 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2711 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "116[\r][\n]"
 2711 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x2][0x0][0x0][0x0][0x0][0x0][0x0][0xffffffb1]2022-04-27 04:02:23.361 UTC [1] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit[\n]"
 2711 [docker-java-stream--1607820449] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x2][0x0][0x0][0x0][0x0][0x0][0x0]U2022-04-27 04:02:23.361 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432[\n]"
@@ -1821,7 +1821,7 @@ java.sql.SQLFeatureNotSupportedException: Method org.postgresql.jdbc.PgConnectio
           - suffixed key columns - {id1_0_0_}
 
 3990 [Test worker] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.usercrud.business.entity.User [NONE]: select user0_.id as id1_0_0_, user0_.country as country2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.gender as gender5_0_0_, user0_.last_name as last_nam6_0_0_, user0_.middle_name as middle_n7_0_0_ from users user0_ where user0_.id=?
-4006 [Test worker] DEBUG org.hibernate.SQL - drop table if exists users CASCADE 
+4006 [Test worker] DEBUG org.hibernate.SQL - drop table if exists users CASCADE
 4010 [Test worker] DEBUG o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning
 org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveNoticeResponse(QueryExecutorImpl.java:2694)
@@ -2109,7 +2109,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4313 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 4313 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 4313 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-4332 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+4332 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	c.e.u.p.UserController:
 	{POST [/user]}: addUser(User,BindingResult,HttpServletRequest)
 	{DELETE [/user/id/{id}]}: deleteUserById(Long)
@@ -2122,7 +2122,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 	{PUT [/user/email/{email}]}: updateUserByEmail(String,User)
 	{GET [/user/id/{id}]}: getUserById(Long)
 	{GET [/user/email/{email}]}: getUserByEmail(String)
-4334 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+4334 [Test worker] DEBUG _.s.w.s.HandlerMapping.Mappings -
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -2239,7 +2239,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4474 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
 4475 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
 4476 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-4476 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: 
+4476 [Test worker] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets:
 4479 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'mockMvc'
 4479 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
 4480 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring TestDispatcherServlet ''
@@ -2261,7 +2261,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4498 [Test worker] DEBUG o.s.c.s.DefaultLifecycleProcessor - Successfully started bean 'webServerStartStop'
 4498 [Test worker] DEBUG o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
 4498 [Test worker] DEBUG o.s.c.s.DefaultLifecycleProcessor - Successfully started bean 'webServerGracefulShutdown'
-4503 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+4503 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================
@@ -3456,7 +3456,7 @@ Unconditional classes:
 4823 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 4823 [SpringApplicationShutdownHook] DEBUG o.h.internal.SessionFactoryImpl - HHH000031: Closing
 4823 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-4823 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - drop table if exists users CASCADE 
+4823 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - drop table if exists users CASCADE
 4830 [SpringApplicationShutdownHook] DEBUG o.h.t.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@15a704d4] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5408fca1]
 4830 [SpringApplicationShutdownHook] DEBUG o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
 4831 [SpringApplicationShutdownHook] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries

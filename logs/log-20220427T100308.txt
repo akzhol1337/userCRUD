@@ -872,7 +872,7 @@ org.postgresql.util.PSQLException: FATAL: password authentication failed for use
           - suffixed key columns - {id1_0_0_}
 
 7064 [Test worker] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.usercrud.business.entity.User [NONE]: select user0_.id as id1_0_0_, user0_.country as country2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.gender as gender5_0_0_, user0_.last_name as last_nam6_0_0_, user0_.middle_name as middle_n7_0_0_ from users user0_ where user0_.id=?
-7064 [Test worker] DEBUG org.hibernate.SQL - drop table if exists users CASCADE 
+7064 [Test worker] DEBUG org.hibernate.SQL - drop table if exists users CASCADE
 7064 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-2 - configuration:
 7064 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
 7064 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
@@ -1325,7 +1325,7 @@ org.postgresql.util.PSQLException: FATAL: password authentication failed for use
 8092 [Test worker] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
 8092 [Test worker] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
 8092 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-8096 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+8096 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================

@@ -20,7 +20,7 @@
 469  [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
 470  [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Trying out strategy: UnixSocketClientProviderStrategy
 571  [ducttape-0] DEBUG o.t.d.DockerClientProviderStrategy - Pinging docker daemon...
-582  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+582  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 591  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
 592  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 593  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -84,7 +84,7 @@
 721  [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Transport type: 'httpclient5', Docker host: 'unix:///var/run/docker.sock'
 721  [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
 722  [Test worker] INFO  o.t.DockerClientFactory - Docker host IP address is localhost
-722  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+722  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 722  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: preparing request execution
 722  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 722  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -137,7 +137,7 @@
 739  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: releasing endpoint
 739  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection http-outgoing-0 can be kept alive for 3 MINUTES
 739  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-741  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+741  [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 741  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000003: preparing request execution
 741  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 741  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -192,7 +192,7 @@
 757  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: releasing endpoint
 757  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection http-outgoing-0 can be kept alive for 3 MINUTES
 757  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-757  [Test worker] INFO  o.t.DockerClientFactory - Connected to docker: 
+757  [Test worker] INFO  o.t.DockerClientFactory - Connected to docker:
   Server Version: 20.10.12
   API Version: 1.41
   Operating System: Docker Desktop
@@ -257,7 +257,7 @@
 780  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection http-outgoing-0 can be kept alive for 3 MINUTES
 780  [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
 787  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Looking up auth config for image: testcontainers/ryuk:0.3.3 at registry: index.docker.io
-787  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix: 
+787  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix:
 787  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - registryName [index.docker.io] for dockerImageName [testcontainers/ryuk:0.3.3]
 787  [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Executing docker credential provider: docker-credential-desktop to locate auth config for: index.docker.io
 790  [Test worker] DEBUG o.t.s.o.z.exec.ProcessExecutor - Executing [docker-credential-desktop, get].
@@ -1022,13 +1022,13 @@ java.nio.channels.ClosedChannelException: null
 2018 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: selecting dynamic shared memory implementation ... posix
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: creating subdirectories ... ok
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: fixing permissions on existing directory /var/lib/postgresql/data ... ok
-2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Data page checksums are disabled.
-2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default text search configuration will be set to "english".
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default database encoding has accordingly been set to "UTF8".
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The database cluster will be initialized with locale "en_US.utf8".
-2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: This user must also own the server process.
 2019 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The files belonging to this database system will be owned by user "postgres".
 2032 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "32[\r][\n]"
@@ -1065,7 +1065,7 @@ java.nio.channels.ClosedChannelException: null
 2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: --auth-local and --auth-host, the next time you run initdb.
 2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: You can change this by editing pg_hba.conf or using the option -A, or
 2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: initdb: warning: enabling "trust" authentication for local connections
-2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: syncing data to disk ... ok
 2579 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "99[\r][\n]"
 2579 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
@@ -1074,11 +1074,11 @@ java.nio.channels.ClosedChannelException: null
 2579 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]8    pg_ctl -D /var/lib/postgresql/data -l logfile start[\n]"
 2579 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
 2579 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:     pg_ctl -D /var/lib/postgresql/data -l logfile start
-2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Success. You can now start the database server using:
-2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2590 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2604 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "145[\r][\n]"
 2604 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xffffffd1]waiting for server to start....2022-04-27 03:57:46.937 UTC [49] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit[\n]"
 2604 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]d2022-04-27 03:57:46.937 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"[\n]"
@@ -1127,10 +1127,10 @@ java.nio.channels.ClosedChannelException: null
 2789 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 2022-04-27 03:57:47.113 UTC [49] LOG:  background worker "logical replication launcher" (PID 56) exited with exit code 1
 2789 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: .2022-04-27 03:57:47.111 UTC [49] LOG:  aborting any active transactions
 2789 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: waiting for server to shut down...2022-04-27 03:57:47.111 UTC [49] LOG:  received fast shutdown request
-2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
-2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
+2790 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2883 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "25[\r][\n]"
 2883 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x6] done[\n]"
 2883 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xf]server stopped[\n]"
@@ -1142,9 +1142,9 @@ java.nio.channels.ClosedChannelException: null
 2884 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]6PostgreSQL init process complete; ready for start up.[\n]"
 2884 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
 2884 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2895 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2895 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2895 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: PostgreSQL init process complete; ready for start up.
-2895 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2895 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2897 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "16e[\r][\n]"
 2897 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x2][0x0][0x0][0x0][0x0][0x0][0x0][0xffffffb1]2022-04-27 03:57:47.230 UTC [1] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit[\n]"
 2897 [docker-java-stream--1452649872] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x2][0x0][0x0][0x0][0x0][0x0][0x0]U2022-04-27 03:57:47.230 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432[\n]"

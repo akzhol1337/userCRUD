@@ -53,7 +53,7 @@
 788  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
 788  [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
 860  [ducttape-0] DEBUG o.t.d.DockerClientProviderStrategy - Pinging docker daemon...
-872  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+872  [ducttape-0] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 882  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
 886  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 887  [ducttape-0] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -117,7 +117,7 @@
 1009 [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Transport type: 'httpclient5', Docker host: 'unix:///var/run/docker.sock'
 1009 [Test worker] DEBUG o.t.d.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
 1009 [Test worker] INFO  o.t.DockerClientFactory - Docker host IP address is localhost
-1010 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+1010 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 1010 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: preparing request execution
 1010 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 1010 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -170,7 +170,7 @@
 1027 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: releasing endpoint
 1027 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1027 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-1028 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd: 
+1028 [Test worker] DEBUG o.t.s.c.g.d.c.c.AbstrDockerCmd - Cmd:
 1029 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.c.InternalHttpClient - ex-00000003: preparing request execution
 1029 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
 1029 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.p.RequestAuthCache - Auth cache not set in the context
@@ -225,7 +225,7 @@
 1050 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: releasing endpoint
 1050 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1050 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000002: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
-1050 [Test worker] INFO  o.t.DockerClientFactory - Connected to docker: 
+1050 [Test worker] INFO  o.t.DockerClientFactory - Connected to docker:
   Server Version: 20.10.12
   API Version: 1.41
   Operating System: Docker Desktop
@@ -290,7 +290,7 @@
 1068 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection http-outgoing-0 can be kept alive for 3 MINUTES
 1068 [Test worker] DEBUG c.g.d.z.s.o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000003: connection released [route: {}->unix://localhost:2375][total available: 1; route allocated: 1 of 2147483647; total allocated: 1 of 2147483647]
 1074 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Looking up auth config for image: testcontainers/ryuk:0.3.3 at registry: index.docker.io
-1074 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix: 
+1074 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/rockkstar/.docker/config.json (exists) and commandPathPrefix:
 1074 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - registryName [index.docker.io] for dockerImageName [testcontainers/ryuk:0.3.3]
 1074 [Test worker] DEBUG o.t.utility.RegistryAuthLocator - Executing docker credential provider: docker-credential-desktop to locate auth config for: index.docker.io
 1077 [Test worker] DEBUG o.t.s.o.z.exec.ProcessExecutor - Executing [docker-credential-desktop, get].
@@ -1049,7 +1049,7 @@ java.nio.channels.ClosedChannelException: null
 2030 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
 2030 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]Ifixing permissions on existing directory /var/lib/postgresql/data ... ok[\n]"
 2030 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2031 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "27[\r][\n]"
 2031 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1f]creating subdirectories ... ok[\n]"
 2031 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
@@ -1057,11 +1057,11 @@ java.nio.channels.ClosedChannelException: null
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: fixing permissions on existing directory /var/lib/postgresql/data ... ok
 2031 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]9selecting dynamic shared memory implementation ... posix[\n]"
 2031 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: selecting dynamic shared memory implementation ... posix
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: creating subdirectories ... ok
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Data page checksums are disabled.
-2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default text search configuration will be set to "english".
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The default database encoding has accordingly been set to "UTF8".
 2031 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: The database cluster will be initialized with locale "en_US.utf8".
@@ -1108,12 +1108,12 @@ java.nio.channels.ClosedChannelException: null
 2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: --auth-local and --auth-host, the next time you run initdb.
 2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: You can change this by editing pg_hba.conf or using the option -A, or
 2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDERR: initdb: warning: enabling "trust" authentication for local connections
-2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:     pg_ctl -D /var/lib/postgresql/data -l logfile start
-2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2576 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: Success. You can now start the database server using:
-2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
-2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
+2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2577 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: syncing data to disk ... ok
 2602 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "d9[\r][\n]"
 2602 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xffffffd1]waiting for server to start....2022-04-27 04:54:38.914 UTC [50] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit[\n]"
@@ -1167,10 +1167,10 @@ java.nio.channels.ClosedChannelException: null
 2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 2022-04-27 04:54:39.070 UTC [50] LOG:  background worker "logical replication launcher" (PID 57) exited with exit code 1
 2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 2022-04-27 04:54:39.068 UTC [50] LOG:  aborting any active transactions
 2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: waiting for server to shut down....2022-04-27 04:54:39.068 UTC [50] LOG:  received fast shutdown request
-2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
-2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
+2765 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "75[\r][\n]"
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x6] done[\n]"
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0xf]server stopped[\n]"
@@ -1178,9 +1178,9 @@ java.nio.channels.ClosedChannelException: null
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0]6PostgreSQL init process complete; ready for start up.[\n]"
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[0x1][0x0][0x0][0x0][0x0][0x0][0x0][0x1][\n]"
 2861 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "[\r][\n]"
-2861 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2861 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2862 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: PostgreSQL init process complete; ready for start up.
-2862 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: 
+2862 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:
 2862 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT: server stopped
 2862 [Test worker] DEBUG o.t.c.output.WaitingConsumer - STDOUT:  done
 2874 [docker-java-stream-882486978] DEBUG c.g.d.z.s.o.a.hc.client5.http.wire - http-outgoing-2 << "16e[\r][\n]"
@@ -1483,7 +1483,7 @@ java.nio.channels.ClosedChannelException: null
 3538 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
 3543 [Test worker] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to 'DataSourceProperties' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.datasource.url' to java.lang.String
 3544 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-3556 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+3556 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
 ============================
@@ -2682,7 +2682,7 @@ Caused by: java.lang.IllegalArgumentException: Requested port (5432) is not mapp
 	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:390)
 	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:340)
 	... 146 common frames omitted
-3563 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+3563 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
 
 ***************************
 APPLICATION FAILED TO START
@@ -2697,4 +2697,3 @@ Failed to bind properties under 'spring.datasource.url' to java.lang.String:
 Action:
 
 Update your application's configuration
-

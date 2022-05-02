@@ -32,7 +32,7 @@ Console credentials:<br>
     </p>
 
     localhost:port/add
-    
+
     Request Body:
     {
         "firstName": "Akzhol",
@@ -44,9 +44,9 @@ Console credentials:<br>
 
     firstName, gender, email is required fields
     gender's value: [0-10]
-    
+
 <code>GET</code> Getting user by id/email
-    
+
     localhost:port/user/id/{id}
 
     localhost:port/user/email/{email}
@@ -56,11 +56,11 @@ Console credentials:<br>
 
     localhost:port/user/email/{email}
 <code>PUT</code> Updating user by id/email
-    
+
     localhost:port/user/id/{id}
 
     localhost:port/user/email/{email}
-    
+
     Request Body:
     {
         "firstName": "newName",
@@ -87,7 +87,3 @@ Console credentials:<br>
     localhost:port/users/{pageNumber}/{pageSize}
 
 </ul>
-
-
-
-
