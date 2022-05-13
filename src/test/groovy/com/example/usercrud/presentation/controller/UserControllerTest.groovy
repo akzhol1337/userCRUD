@@ -1,7 +1,7 @@
 package com.example.usercrud.presentation.controller
 
 import com.example.usercrud.business.entity.User
-import com.example.usercrud.business.service.UserService
+import com.example.usercrud.business.service.UserServiceImpl
 import com.example.usercrud.persistance.repository.UserRepository
 import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.json.JsonSlurper
@@ -14,7 +14,6 @@ import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.context.DynamicPropertySource
 import org.springframework.test.web.servlet.MockMvc
 import org.testcontainers.containers.PostgreSQLContainer
-import org.testcontainers.spock.Testcontainers
 import spock.lang.Shared
 import spock.lang.Specification
 
@@ -28,7 +27,7 @@ class UserControllerTest extends Specification {
         "firstName",
         "lastName",
         "middleName",
-        "country",
+        "Kazakhstan",
         1,
         "email@email.email")
 
@@ -39,7 +38,7 @@ class UserControllerTest extends Specification {
     private static PostgreSQLContainer postgresContainer = new PostgreSQLContainer("postgres:latest")
 
     @Autowired
-    private UserService userService
+    private UserServiceImpl userService
 
     @Autowired
     private MockMvc mockMvc
@@ -69,16 +68,11 @@ class UserControllerTest extends Specification {
                 .andReturn()
                 .response
             def responseBody = jsonSlurper.parseText(response.getContentAsString())
+            def responseUser = mapper.convertValue(responseBody, User)
         then:
             response.status == HttpStatus.OK.value()
             response.getContentType() == "application/json"
-            responseBody.id == 1L
-            responseBody.firstName == "firstName"
-            responseBody.lastName == "lastName"
-            responseBody.middleName == "middleName"
-            responseBody.country == "Kazakhstan"
-            responseBody.gender == 1L
-            responseBody.email == "email@email.email"
+            testUser.equals(responseUser)
     }
 
     def "should return 400 when adding user with empty first name"() {
@@ -172,16 +166,11 @@ class UserControllerTest extends Specification {
                 .andReturn()
                 .response
             def responseBody = jsonSlurper.parseText(response.getContentAsString())
+            def responseUser = mapper.convertValue(responseBody, User)
         then:
             response.status == HttpStatus.OK.value()
             response.getContentType() == "application/json"
-            responseBody.id == id
-            responseBody.firstName == "firstName"
-            responseBody.lastName == "lastName"
-            responseBody.middleName == "middleName"
-            responseBody.country == "country"
-            responseBody.gender == 1L
-            responseBody.email == "email@email.email"
+            testUser.equals(responseUser)
     }
 
     def "should return 400 for getting un existing user by id"() {
@@ -206,16 +195,11 @@ class UserControllerTest extends Specification {
                 .andReturn()
                 .response
             def responseBody = jsonSlurper.parseText(response.getContentAsString())
+            def responseUser = mapper.convertValue(responseBody, User)
         then:
             response.status == HttpStatus.OK.value()
             response.getContentType() == "application/json"
-            responseBody.id == id
-            responseBody.firstName == "firstName"
-            responseBody.lastName == "lastName"
-            responseBody.middleName == "middleName"
-            responseBody.country == "country"
-            responseBody.gender == 1L
-            responseBody.email == "email@email.email"
+            testUser.equals(responseUser)
     }
 
     def "should return 400 for getting un existing user by email"() {

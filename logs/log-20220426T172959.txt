@@ -27,7 +27,7 @@
 1064 [Test worker] DEBUG o.s.u.c.s.UiApplicationContextUtils - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@1c5d3a37]
 1064 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userCrudApplication'
 1065 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userController'
-1065 [Test worker] WARN  o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/presentation/UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+1065 [Test worker] WARN  o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/presentation/UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 1066 [Test worker] DEBUG o.s.b.a.l.ConditionEvaluationReportLoggingListener -
 
 
@@ -367,7 +367,7 @@ Unconditional classes:
 
 
 1067 [Test worker] DEBUG o.s.b.d.LoggingFailureAnalysisReporter - Application failed to start due to an exception
-org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1799)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1355)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
@@ -479,12 +479,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.example.usercrud.presentation.UserController required a bean of type 'com.example.usercrud.business.service.UserService' that could not be found.
+Parameter 0 of constructor in com.example.usercrud.presentation.UserController required a bean of type 'com.example.usercrud.business.service.UserServiceImpl' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.example.usercrud.business.service.UserService' in your configuration.
+Consider defining a bean of type 'com.example.usercrud.business.service.UserServiceImpl' in your configuration.
 
 1067 [Test worker] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@132ddbab] to prepare test instance [com.example.usercrud.presentation.controller.UserControllerTest@3a543f31]
 java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -570,7 +570,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/presentation/UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/presentation/UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
@@ -591,7 +591,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 81 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.usercrud.business.service.UserServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1799)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1355)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)

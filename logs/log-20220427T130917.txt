@@ -3443,7 +3443,7 @@ Unconditional classes:
 4852 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 4880 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=country, gender=1, (truncated)...]
 4907 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1887005473<open>)] for JPA transaction
-4907 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.addUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+4907 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.addUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 4907 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 4907 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 4911 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3e9053b3]
@@ -3841,7 +3841,7 @@ Unconditional classes:
 5151 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 5151 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=country, gender=1, (truncated)...]
 5152 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1677727024<open>)] for JPA transaction
-5152 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.addUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+5152 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.addUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 5152 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5152 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 5152 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1f9b8c23]
@@ -3943,7 +3943,7 @@ Unconditional classes:
 5176 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.usercrud.presentation.UserController#getUserById(Long)
 5176 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 5177 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1195824429<open>)] for JPA transaction
-5177 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+5177 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 5177 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5177 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 5177 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4d0927df]
@@ -4033,7 +4033,7 @@ response.status == HttpStatus.OK.value()
 5313 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.usercrud.presentation.UserController#getUserById(Long)
 5313 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 5313 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1270516<open>)] for JPA transaction
-5313 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+5313 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 5313 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5313 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 5313 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6e5506c9]
@@ -4112,7 +4112,7 @@ response.status == HttpStatus.OK.value()
 5346 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.usercrud.presentation.UserController#getUserByEmail(String)
 5346 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 5349 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1948489841<open>)] for JPA transaction
-5349 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.findByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+5349 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.findByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 5349 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5349 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 5349 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@377d66f]
@@ -4293,7 +4293,7 @@ response.status == HttpStatus.OK.value()
 5380 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.usercrud.presentation.UserController#getUserByEmail(String)
 5381 [Test worker] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 5381 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1436823730<open>)] for JPA transaction
-5381 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserService.findByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+5381 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.example.usercrud.business.service.UserServiceImpl.findByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 5381 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5381 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
 5381 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4a9cb9d8]

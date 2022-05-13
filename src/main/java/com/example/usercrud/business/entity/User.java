@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Objects;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -58,4 +59,22 @@ public class User {
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
     private String email;
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if(! (o instanceof User)) {
+            return false;
+        }
+        User user = (User) o;
+
+        return Objects.equals(user.getFirstName(), firstName)
+            && Objects.equals(user.getLastName(), lastName)
+            && Objects.equals(user.getMiddleName(), middleName)
+            && Objects.equals(user.getCountry(), country)
+            && Objects.equals(user.getGender(), gender)
+            && Objects.equals(user.getEmail(), email);
+    }
 }

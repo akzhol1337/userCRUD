@@ -1,0 +1,57 @@
+<code_scheme name="folium" version="173">
+  <option name="LINE_SEPARATOR" value="&#10;" />
+  <JSCodeStyleSettings>
+    <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
+    <option name="USE_DOUBLE_QUOTES" value="false" />
+    <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
+  </JSCodeStyleSettings>
+  <JSON>
+    <option name="OBJECT_WRAPPING" value="5" />
+    <option name="ARRAY_WRAPPING" value="5" />
+  </JSON>
+  <JavaCodeStyleSettings>
+    <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="15" />
+    <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="10" />
+  </JavaCodeStyleSettings>
+  <TypeScriptCodeStyleSettings>
+    <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
+    <option name="FORCE_SEMICOLON_STYLE" value="true" />
+    <option name="USE_DOUBLE_QUOTES" value="false" />
+    <option name="FORCE_QUOTE_STYlE" value="true" />
+    <option name="SPACES_WITHIN_IMPORTS" value="true" />
+  </TypeScriptCodeStyleSettings>
+  <XML>
+    <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+  </XML>
+  <codeStyleSettings language="Groovy">
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="LABEL_INDENT_SIZE" value="4" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="JAVA">
+    <option name="METHOD_PARAMETERS_WRAP" value="5" />
+    <option name="METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true" />
+    <option name="METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE" value="true" />
+    <option name="WRAP_LONG_LINES" value="true" />
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="JSON">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="SPACE_WITHIN_BRACKETS" value="true" />
+    <option name="SPACE_WITHIN_BRACES" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="TypeScript">
+    <option name="LINE_COMMENT_ADD_SPACE" value="false" />
+    <option name="METHOD_PARAMETERS_WRAP" value="5" />
+    <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="kotlin">
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+    </indentOptions>
+  </codeStyleSettings>
+</code_scheme>
