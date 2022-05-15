@@ -1,22 +1,19 @@
 package com.example.usercrud.business.service;
 
-import com.example.usercrud.business.config.Metric;
+import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
 @Transactional
+
 public interface UserService {
     public Optional<User> addUser(User user);
     public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;

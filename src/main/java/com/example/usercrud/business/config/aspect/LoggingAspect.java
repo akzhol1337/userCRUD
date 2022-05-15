@@ -14,12 +14,12 @@ import java.util.concurrent.atomic.AtomicReference;
 @Aspect
 @Slf4j
 public class LoggingAspect {
-    @Pointcut("@annotation(com.example.usercrud.business.config.Loggable)")
+    @Pointcut("@annotation(com.example.usercrud.business.entity.annotations.Loggable)")
     public void methodLevel(){
 
     }
 
-    @Pointcut("within(@com.example.usercrud.business.config.Loggable *)")
+    @Pointcut("within(@com.example.usercrud.business.entity.annotations.Loggable *)")
     public void beanAnnotatedWithLoggable(){
 
     }

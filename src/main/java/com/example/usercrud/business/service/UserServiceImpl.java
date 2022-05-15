@@ -1,6 +1,7 @@
 package com.example.usercrud.business.service;
 
-import com.example.usercrud.business.config.Metric;
+import com.example.usercrud.business.entity.annotations.Loggable;
+import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
 import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,7 +21,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-//@Loggable
+@Loggable
 public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepo;
@@ -35,6 +36,7 @@ public class UserServiceImpl implements UserService{
         return newUser;
     }
 
+
     public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException {
         String userIP = request.getRemoteAddr();
         if (Objects.equals(userIP, "0:0:0:0:0:0:0:1") || Objects.equals(userIP, "127.0.0.1")) {
@@ -44,7 +46,6 @@ public class UserServiceImpl implements UserService{
                 String.class);
             ObjectMapper mapper = new ObjectMapper();
             Map map = mapper.readValue(result, Map.class);
-
             if (map.get("status").equals("fail")) {
                 // if it's private ip
                 user.setCountry("Kazakhstan");
@@ -58,6 +59,7 @@ public class UserServiceImpl implements UserService{
         }
         return newUser;
     }
+
     @Metric(name="retrieveById")
     public Optional<User> findById(Long id) {
         return userRepo.findById(id);
