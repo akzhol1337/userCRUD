@@ -2,7 +2,9 @@ package com.example.usercrud.business.service;
 
 import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
+import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import lombok.Data;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,6 @@ import java.util.Optional;
 
 @Service
 @Transactional
-
 public interface UserService {
     public Optional<User> addUser(User user);
     public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;
@@ -40,4 +41,6 @@ public interface UserService {
     public List<User> getAll();
 
     public Optional<User> updateById(Long id, User newUser);
+
+    void setRepository(UserRepository userRepository);
 }

@@ -1,6 +1,7 @@
 package com.example.usercrud.presentation.controller
 
 import com.example.usercrud.business.entity.User
+import com.example.usercrud.business.service.UserService
 import com.example.usercrud.business.service.UserServiceImpl
 import com.example.usercrud.persistance.repository.UserRepository
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -38,7 +39,7 @@ class UserControllerTest extends Specification {
     private static PostgreSQLContainer postgresContainer = new PostgreSQLContainer("postgres:latest")
 
     @Autowired
-    private UserServiceImpl userService
+    private UserService userService
 
     @Autowired
     private MockMvc mockMvc

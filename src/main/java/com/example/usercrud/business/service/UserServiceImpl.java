@@ -6,6 +6,7 @@ import com.example.usercrud.business.entity.User;
 import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @Service
 @Transactional
 @Loggable
+@Data
 public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepo;
@@ -129,5 +131,10 @@ public class UserServiceImpl implements UserService{
             user.get().setGender(newUser.getGender());
         }
         return user;
+    }
+
+    @Override
+    public void setRepository(UserRepository userRepository) {
+        this.userRepo = userRepository;
     }
 }
