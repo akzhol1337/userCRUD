@@ -68,7 +68,7 @@ public class User {
     private String avatar;
 
     @NotEmpty
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     @Override

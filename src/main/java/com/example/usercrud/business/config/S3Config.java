@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AwsConfig {
+public class S3Config {
     @Bean
-    public AmazonS3 getAmazonS3(){
+    public AmazonS3 getAWSS3(){
         AWSCredentials credentials = new BasicAWSCredentials(
             "YCAJE6Wt80x6e9hpi6z71HTVJ",
             "YCOJMZZ3JS_uuicZibtB3X2A_6LFp5hW9VVawXaq"

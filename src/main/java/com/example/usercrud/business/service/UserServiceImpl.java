@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
-    private AmazonS3 amazonS3;
+    private AmazonS3 s3Client;
 
     public Optional<User> addUser(User user) {
         Optional<User> newUser = Optional.empty();
@@ -77,8 +77,8 @@ public class UserServiceImpl implements UserService{
         metadata.setContentType("image/png");
         metadata.setContentLength(encodedAvatar.length);
 
-        amazonS3.putObject("usercrud-avatars", userEmail + ".png", inputStream, metadata);
-        amazonS3.setObjectAcl("usercrud-avatars", userEmail + ".png", CannedAccessControlList.PublicRead);
+        s3Client.putObject("usercrud-avatars", userEmail + ".png", inputStream, metadata);
+        s3Client.setObjectAcl("usercrud-avatars", userEmail + ".png", CannedAccessControlList.PublicRead);
 
         return "https://storage.yandexcloud.net/usercrud-avatars/" + userEmail + ".png";
     }
@@ -136,7 +136,7 @@ public class UserServiceImpl implements UserService{
         user.get().setGender(newUser.getGender());
         if(newUser.getAvatar() != null) {
             if(user.get().getAvatar() != null) {
-                amazonS3.deleteObject("usercrud-avatars", user.get().getEmail());
+                s3Client.deleteObject("usercrud-avatars", user.get().getEmail());
             }
             user.get().setAvatar(getUserAvatarLinkAWSS3(newUser.getAvatar(), newUser.getEmail()));
         }
@@ -172,7 +172,7 @@ public class UserServiceImpl implements UserService{
         user.get().setGender(newUser.getGender());
         if(newUser.getAvatar() != null) {
             if(user.get().getAvatar() != null) {
-                amazonS3.deleteObject("usercrud-avatars", user.get().getEmail());
+                s3Client.deleteObject("usercrud-avatars", user.get().getEmail());
             }
             user.get().setAvatar(getUserAvatarLinkAWSS3(newUser.getAvatar(), newUser.getEmail()));
         }

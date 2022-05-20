@@ -12,6 +12,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
+    User getByEmail(String email);
     boolean existsByEmail(String email);
     void deleteByEmail(String email);
     List<User> findAllByCountry(String country, Pageable pageable);
