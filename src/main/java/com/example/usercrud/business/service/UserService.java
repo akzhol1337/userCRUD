@@ -19,7 +19,6 @@ public interface UserService {
     public Optional<User> addUser(User user);
     public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;
 
-    @Metric(name="retrieveById")
     public Optional<User> findById(Long id);
 
     public Optional<User> findByEmail(String email);

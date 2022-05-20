@@ -1,5 +1,9 @@
 package com.example.usercrud.business.service;
 
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.CannedAccessControlList;
+import com.amazonaws.services.s3.model.ObjectMetadata;
+import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.example.usercrud.business.entity.annotations.Loggable;
 import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
@@ -7,6 +11,8 @@ import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
+import org.apache.commons.codec.binary.Base64;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -15,6 +21,10 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -23,12 +33,15 @@ import java.util.Optional;
 @Service
 @Transactional
 @Loggable
+@Slf4j
 @Data
 public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepo;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private AmazonS3 amazonS3;
 
     public Optional<User> addUser(User user) {
         Optional<User> newUser = Optional.empty();
@@ -38,28 +51,45 @@ public class UserServiceImpl implements UserService{
         return newUser;
     }
 
-
-    public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException {
+    public String getCountryByHttpServletRequest(HttpServletRequest request) throws JsonProcessingException {
         String userIP = request.getRemoteAddr();
         if (Objects.equals(userIP, "0:0:0:0:0:0:0:1") || Objects.equals(userIP, "127.0.0.1")) {
-            user.setCountry("Kazakhstan");
+            return "Kazakhstan";
         } else {
             String result = restTemplate.getForObject("http://ip-api.com/json/" + userIP + "?fields=status,country",
                 String.class);
             ObjectMapper mapper = new ObjectMapper();
             Map map = mapper.readValue(result, Map.class);
             if (map.get("status").equals("fail")) {
-                // if it's private ip
-                user.setCountry("Kazakhstan");
+                return "Kazakhstan";
             } else {
-                user.setCountry((String) map.get("country"));
+                return (String) map.get("country");
             }
         }
-        Optional<User> newUser = Optional.empty();
-        if (!userRepo.existsByEmail(user.getEmail())) {
-            newUser = Optional.of(userRepo.save(user));
+    }
+
+    public String getUserAvatarLinkAWSS3(String decodedBase64, String userEmail) {
+        byte[] encodedAvatar = Base64.decodeBase64(decodedBase64.substring(decodedBase64.indexOf(',') + 1).getBytes());
+
+        InputStream inputStream = new ByteArrayInputStream(encodedAvatar);
+        ObjectMetadata metadata = new ObjectMetadata();
+
+        metadata.setContentType("image/png");
+        metadata.setContentLength(encodedAvatar.length);
+
+        amazonS3.putObject("usercrud-avatars", userEmail + ".png", inputStream, metadata);
+        amazonS3.setObjectAcl("usercrud-avatars", userEmail + ".png", CannedAccessControlList.PublicRead);
+
+        return "https://storage.yandexcloud.net/usercrud-avatars/" + userEmail + ".png";
+    }
+
+    public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException {
+        if(userRepo.existsByEmail(user.getEmail())) {
+            return Optional.empty();
         }
-        return newUser;
+        user.setCountry(getCountryByHttpServletRequest(request));
+        user.setAvatar(getUserAvatarLinkAWSS3(user.getAvatar(), user.getEmail()));
+        return Optional.of(userRepo.save(user));
     }
 
     @Metric(name="retrieveById")
@@ -93,13 +123,22 @@ public class UserServiceImpl implements UserService{
 
     public Optional<User> updateByEmail(String email, User newUser) {
         Optional<User> user = userRepo.findByEmail(email);
-        if (user.isPresent()) {
-            user.get().setEmail(newUser.getEmail());
-            user.get().setCountry(newUser.getCountry());
-            user.get().setFirstName(newUser.getFirstName());
-            user.get().setLastName(newUser.getLastName());
-            user.get().setMiddleName(newUser.getMiddleName());
-            user.get().setGender(newUser.getGender());
+
+        if(user.isEmpty()) {
+            return Optional.empty();
+        }
+
+        user.get().setEmail(newUser.getEmail());
+        user.get().setCountry(newUser.getCountry());
+        user.get().setFirstName(newUser.getFirstName());
+        user.get().setLastName(newUser.getLastName());
+        user.get().setMiddleName(newUser.getMiddleName());
+        user.get().setGender(newUser.getGender());
+        if(newUser.getAvatar() != null) {
+            if(user.get().getAvatar() != null) {
+                amazonS3.deleteObject("usercrud-avatars", user.get().getEmail());
+            }
+            user.get().setAvatar(getUserAvatarLinkAWSS3(newUser.getAvatar(), newUser.getEmail()));
         }
         return user;
     }
@@ -122,13 +161,20 @@ public class UserServiceImpl implements UserService{
 
     public Optional<User> updateById(Long id, User newUser) {
         Optional<User> user = userRepo.findById(id);
-        if (user.isPresent()) {
-            user.get().setEmail(newUser.getEmail());
-            user.get().setCountry(newUser.getCountry());
-            user.get().setFirstName(newUser.getFirstName());
-            user.get().setLastName(newUser.getLastName());
-            user.get().setMiddleName(newUser.getMiddleName());
-            user.get().setGender(newUser.getGender());
+        if(user.isEmpty()) {
+            return Optional.empty();
+        }
+        user.get().setEmail(newUser.getEmail());
+        user.get().setCountry(newUser.getCountry());
+        user.get().setFirstName(newUser.getFirstName());
+        user.get().setLastName(newUser.getLastName());
+        user.get().setMiddleName(newUser.getMiddleName());
+        user.get().setGender(newUser.getGender());
+        if(newUser.getAvatar() != null) {
+            if(user.get().getAvatar() != null) {
+                amazonS3.deleteObject("usercrud-avatars", user.get().getEmail());
+            }
+            user.get().setAvatar(getUserAvatarLinkAWSS3(newUser.getAvatar(), newUser.getEmail()));
         }
         return user;
     }

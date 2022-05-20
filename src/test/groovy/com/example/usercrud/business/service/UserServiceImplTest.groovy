@@ -10,7 +10,7 @@ import spock.lang.Specification
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class UserServiceImplTest extends Specification {
-    private static final testUser = new User(1L, "firstName", "lastName", "middleName", "country", 1, "email@email.email")
+    private static final testUser = new User(1L, "firstName", "lastName", "middleName", "country", 1, "email@email.email", null)
 
     def restTemplate = Mock(RestTemplate)
     def userRepository = Mock(UserRepository)
@@ -94,7 +94,7 @@ class UserServiceImplTest extends Specification {
         given:
             userRepository.findByEmail("email@email.email") >> Optional.of(testUser)
             userService.setRepository(userRepository)
-            def newUser = new User(1L, "newFirstName", "newLastName", "newMiddleName", "newCountry", 2, "newEmail@email.email")
+            def newUser = new User(1L, "newFirstName", "newLastName", "newMiddleName", "newCountry", 2, "newEmail@email.email", null)
         when:
             def updatedUser = userService.updateByEmail("email@email.email", newUser)
         then:
@@ -122,7 +122,7 @@ class UserServiceImplTest extends Specification {
         given:
             userRepository.findById(1L) >> Optional.of(testUser)
             userService.setRepository(userRepository)
-            def newUser = new User(null, "newFirstName", "newLastName", "newMiddleName", "newCountry", 2, "newEmail@email.email")
+            def newUser = new User(null, "newFirstName", "newLastName", "newMiddleName", "newCountry", 2, "newEmail@email.email", null)
         when:
             def updatedUser = userService.updateById(1L, newUser)
         then:
