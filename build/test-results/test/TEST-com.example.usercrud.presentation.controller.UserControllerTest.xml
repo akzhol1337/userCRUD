@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-20T06:02:49" hostname="Akzhols-MacBook-Pro.local" time="0.0">
+<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-20T08:34:21" hostname="Akzhols-MacBook-Pro.local" time="0.0">
   <properties/>
   <testcase name="initializationError" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.0">
     <failure message="org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserControllerTest'" type="org.spockframework.util.InternalSpockError">org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserControllerTest'

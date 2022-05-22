@@ -39,7 +39,7 @@ public class UserController {
     @DeleteMapping("/user/id/{id}")
     public ResponseEntity deleteUserById(@PathVariable Long id){
         if(userService.deleteById(id)){
-            return (ResponseEntity) ResponseEntity.ok(Collections.singletonMap("success", "Deleted user with id " + id));
+            return ResponseEntity.ok(Collections.singletonMap("success", "Deleted user with id " + id));
         }
         return ResponseEntity.badRequest().body(Collections.singletonMap("error", "User with id " + id + " doesn't exist"));
     }
