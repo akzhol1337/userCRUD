@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.business.service.UserServiceImplTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-20T08:34:21" hostname="Akzhols-MacBook-Pro.local" time="0.001">
+<testsuite name="com.example.usercrud.business.service.UserServiceImplTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-22T13:47:50" hostname="Akzhols-MacBook-Pro.local" time="0.0">
   <properties/>
-  <testcase name="initializationError" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.001">
+  <testcase name="initializationError" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.0">
     <failure message="org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserServiceImplTest'" type="org.spockframework.util.InternalSpockError">org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserServiceImplTest'
 	at app//org.spockframework.runtime.PlatformSpecRunner.createSpecInstance(PlatformSpecRunner.java:80)
 	at app//org.spockframework.runtime.PlatformSpecRunner.runSharedSpec(PlatformSpecRunner.java:45)

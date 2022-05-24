@@ -1,45 +1,48 @@
 package com.example.usercrud.business.service;
 
-import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
+import com.example.usercrud.business.entity.UserRequestDto;
 import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import lombok.Data;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 @Transactional
 public interface UserService {
-    public Optional<User> addUser(User user);
-    public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;
+    Optional<User> addUser(User user);
 
-    public Optional<User> findById(Long id);
+    Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;
 
-    public Optional<User> findByEmail(String email);
+    Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request) throws IOException;
 
-    public Boolean deleteById(Long id);
+    Optional<User> findById(Long id);
 
-    public Boolean deleteByEmail(String email);
+    Optional<User> findByEmail(String email);
 
-    public boolean existsByEmail(String email);
+    Boolean deleteById(Long id);
 
-    public Optional<User> updateByEmail(String email, User newUser);
+    Boolean deleteByEmail(String email);
 
-    public List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize);
+    boolean existsByEmail(String email);
 
-    public List<User> getAllByCountry(String country);
+    Optional<User> updateByEmail(String email, User newUser);
 
-    public Page<User> getPage(Integer pageNumber, Integer pageSize);
+    List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize);
 
-    public List<User> getAll();
+    List<User> getAllByCountry(String country);
 
-    public Optional<User> updateById(Long id, User newUser);
+    Page<User> getPage(Integer pageNumber, Integer pageSize);
+
+    List<User> getAll();
+
+    Optional<User> updateById(Long id, User newUser);
 
     void setRepository(UserRepository userRepository);
 }

@@ -4,6 +4,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.example.usercrud.business.entity.UserRequestDto;
 import com.example.usercrud.business.entity.annotations.Loggable;
 import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
@@ -18,11 +19,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
@@ -50,6 +53,7 @@ public class UserServiceImpl implements UserService{
         }
         return newUser;
     }
+
 
     public String getCountryByHttpServletRequest(HttpServletRequest request) throws JsonProcessingException {
         String userIP = request.getRemoteAddr();
@@ -83,12 +87,44 @@ public class UserServiceImpl implements UserService{
         return "https://storage.yandexcloud.net/usercrud-avatars/" + userEmail + ".png";
     }
 
+    public String getUserAvatarLinkAWSS3(MultipartFile multipartFile, String userEmail) throws IOException {
+        ObjectMetadata metadata = new ObjectMetadata();
+
+        String contentType = multipartFile.getContentType();
+
+        metadata.setContentType(contentType);
+        metadata.setContentLength(multipartFile.getBytes().length);
+
+        String extension = '.' + contentType.substring(contentType.indexOf('/') + 1);
+
+        s3Client.putObject("usercrud-avatars", userEmail + extension, multipartFile.getInputStream(), metadata);
+        s3Client.setObjectAcl("usercrud-avatars", userEmail + extension, CannedAccessControlList.PublicRead);
+
+        return "https://storage.yandexcloud.net/usercrud-avatars/" + userEmail + extension;
+    }
+
     public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException {
         if(userRepo.existsByEmail(user.getEmail())) {
             return Optional.empty();
         }
         user.setCountry(getCountryByHttpServletRequest(request));
-        user.setAvatar(getUserAvatarLinkAWSS3(user.getAvatar(), user.getEmail()));
+        if(user.getAvatar() != null) {
+            user.setAvatar(getUserAvatarLinkAWSS3(user.getAvatar(), user.getEmail()));
+        }
+        return Optional.of(userRepo.save(user));
+    }
+
+    @Override
+    public Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request) throws IOException {
+        if(userRepo.existsByEmail(userRequestDto.getEmail())) {
+            return Optional.empty();
+        }
+        User user = new User(userRequestDto);
+        user.setCountry(getCountryByHttpServletRequest(request));
+
+        if(userRequestDto.getAvatar() != null) {
+            user.setAvatar(getUserAvatarLinkAWSS3(userRequestDto.getAvatar(), userRequestDto.getEmail()));
+        }
         return Optional.of(userRepo.save(user));
     }
 

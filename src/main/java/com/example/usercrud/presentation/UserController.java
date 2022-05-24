@@ -1,11 +1,13 @@
 package com.example.usercrud.presentation;
 
 import com.example.usercrud.business.entity.User;
+import com.example.usercrud.business.entity.UserRequestDto;
 import com.example.usercrud.business.entity.annotations.Loggable;
 import com.example.usercrud.business.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.*;
 
 @RestController
@@ -24,14 +27,28 @@ public class UserController {
 
     @PostMapping("/user")
     public ResponseEntity addUser(@RequestBody @Valid User user, BindingResult bindingResult, HttpServletRequest request) throws Exception {
-        if(bindingResult.hasErrors()){
+        if(bindingResult.hasErrors()) {
             Map<String, String> errorMessages = new HashMap<>();
             bindingResult.getFieldErrors().forEach(err -> errorMessages.put(err.getField(), err.getDefaultMessage()));
             return ResponseEntity.badRequest().body(errorMessages);
         }
         Optional<User> newUser = userService.addUser(user, request);
-        if(newUser.isEmpty()){
+        if(newUser.isEmpty()) {
             return ResponseEntity.badRequest().body(Collections.singletonMap("error", "User with email " + user.getEmail() + " already exist"));
+        }
+        return ResponseEntity.ok(newUser.get());
+    }
+
+    @PostMapping(value = "/user/multipart")
+    public ResponseEntity addUser(@ModelAttribute @Valid UserRequestDto userRequestDto, BindingResult bindingResult, HttpServletRequest request) throws IOException {
+        if(bindingResult.hasErrors()) {
+            Map<String, String> errorMessages = new HashMap<>();
+            bindingResult.getFieldErrors().forEach(err -> errorMessages.put(err.getField(), err.getDefaultMessage()));
+            return ResponseEntity.badRequest().body(errorMessages);
+        }
+        Optional<User> newUser = userService.addUser(userRequestDto, request);
+        if(newUser.isEmpty()) {
+            return ResponseEntity.badRequest().body(Collections.singletonMap("error", "User with email " + userRequestDto.getEmail() + " already exist"));
         }
         return ResponseEntity.ok(newUser.get());
     }
