@@ -66,20 +66,20 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllByCountry(country));
     }
 
-    @GetMapping("/users/{country}/{pageNumber}/{pageSize}")
-    public ResponseEntity getAllUsersByCountry(@PathVariable String country, @PathVariable Integer pageNumber, @PathVariable Integer pageSize){
-        return ResponseEntity.ok(userService.getPageByCountry(country, pageNumber, pageSize));
-    }
+//    @GetMapping("/users/{country}/{pageNumber}/{pageSize}")
+//    public ResponseEntity getAllUsersByCountry(@PathVariable String country, @PathVariable Integer pageNumber, @PathVariable Integer pageSize){
+//        return ResponseEntity.ok(userService.getPageByCountry(country, pageNumber, pageSize));
+//    }
 
     @GetMapping("/users")
     public ResponseEntity getAllUsers(){
         return ResponseEntity.ok(userService.getAll());
     }
 
-    @GetMapping("/users/{pageNumber}/{pageSize}")
-    public ResponseEntity getAllUsers(@PathVariable Integer pageNumber, @PathVariable Integer pageSize){
-        return ResponseEntity.ok(userService.getPage(pageNumber, pageSize));
-    }
+//    @GetMapping("/users/{pageNumber}/{pageSize}")
+//    public ResponseEntity getAllUsers(@PathVariable Integer pageNumber, @PathVariable Integer pageSize){
+//        return ResponseEntity.ok(userService.getPage(pageNumber, pageSize));
+//    }
 
     @DeleteMapping("/user/email/{email}")
     public ResponseEntity deleteUserByEmail(@PathVariable String email){

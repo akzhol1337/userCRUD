@@ -34,15 +34,15 @@ public interface UserService {
 
     Optional<User> updateByEmail(String email, User newUser);
 
-    List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize);
+    //List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize);
 
     List<User> getAllByCountry(String country);
 
-    Page<User> getPage(Integer pageNumber, Integer pageSize);
+    //Page<User> getPage(Integer pageNumber, Integer pageSize);
 
     List<User> getAll();
 
     Optional<User> updateById(Long id, User newUser);
 
-    void setRepository(UserRepository userRepository);
+    //void setRepository(UserRepository userRepository);
 }

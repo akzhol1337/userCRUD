@@ -8,7 +8,9 @@ import com.example.usercrud.business.entity.UserRequestDto;
 import com.example.usercrud.business.entity.annotations.Loggable;
 import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
+import com.example.usercrud.persistance.repository.IUserRepositoryJDBC;
 import com.example.usercrud.persistance.repository.UserRepository;
+import com.example.usercrud.persistance.repository.UserRepositoryJDBC;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
@@ -40,7 +42,7 @@ import java.util.Optional;
 @Data
 public class UserServiceImpl implements UserService{
     @Autowired
-    private UserRepository userRepo;
+    private IUserRepositoryJDBC userRepo;
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
@@ -179,17 +181,17 @@ public class UserServiceImpl implements UserService{
         return user;
     }
 
-    public List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize) {
-        return userRepo.findAllByCountry(country, PageRequest.of(pageNumber, pageSize));
-    }
+//    public List<User> getPageByCountry(String country, Integer pageNumber, Integer pageSize) {
+//        return userRepo.findAllByCountry(country, PageRequest.of(pageNumber, pageSize));
+//    }
 
     public List<User> getAllByCountry(String country) {
         return userRepo.findAllByCountry(country);
     }
 
-    public Page<User> getPage(Integer pageNumber, Integer pageSize) {
-        return userRepo.findAll(PageRequest.of(pageNumber, pageSize));
-    }
+//    public Page<User> getPage(Integer pageNumber, Integer pageSize) {
+//        return userRepo.findAll(PageRequest.of(pageNumber, pageSize));
+//    }
 
     public List<User> getAll() {
         return userRepo.findAll();
@@ -215,8 +217,8 @@ public class UserServiceImpl implements UserService{
         return user;
     }
 
-    @Override
-    public void setRepository(UserRepository userRepository) {
-        this.userRepo = userRepository;
-    }
+//    @Override
+//    public void setRepository(UserRepository userRepository) {
+//        this.userRepo = userRepository;
+//    }
 }

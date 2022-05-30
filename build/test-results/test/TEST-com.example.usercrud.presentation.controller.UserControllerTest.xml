@@ -1,80 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-22T13:47:50" hostname="Akzhols-MacBook-Pro.local" time="0.0">
+<testsuite name="com.example.usercrud.presentation.controller.UserControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-05-24T06:27:09" hostname="Akzhols-MacBook-Pro.local" time="1.203">
   <properties/>
-  <testcase name="initializationError" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.0">
-    <failure message="org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserControllerTest'" type="org.spockframework.util.InternalSpockError">org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserControllerTest'
-	at app//org.spockframework.runtime.PlatformSpecRunner.createSpecInstance(PlatformSpecRunner.java:80)
-	at app//org.spockframework.runtime.PlatformSpecRunner.runSharedSpec(PlatformSpecRunner.java:45)
-	at app//org.spockframework.runtime.SpecNode.prepare(SpecNode.java:32)
-	at app//org.spockframework.runtime.SpecNode.prepare(SpecNode.java:11)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base@17.0.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.1/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.ExceptionInInitializerError
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
-	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
-	at java.base/java.lang.Class.newInstance(Class.java:645)
-	at org.spockframework.runtime.PlatformSpecRunner.createSpecInstance(PlatformSpecRunner.java:78)
-	... 51 more
-Caused by: groovy.lang.GroovyRuntimeException: Could not find matching constructor for: com.example.usercrud.business.entity.User(null, String, String, String, String, Integer, String)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1845)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1615)
-	at org.codehaus.groovy.runtime.callsite.MetaClassConstructorSite.callConstructor(MetaClassConstructorSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at com.example.usercrud.presentation.controller.UserControllerTest.&lt;clinit&gt;(UserControllerTest.groovy:27)
-	... 59 more
-</failure>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="should return 200 when adding new user with correct data" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.209"/>
+  <testcase name="should return 200 when adding new user with correct data send by multipart/form-data" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.803"/>
+  <testcase name="should return 400 when adding user with empty first name" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.014"/>
+  <testcase name="should return 400 when adding user with empty email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.009"/>
+  <testcase name="should return 400 when adding user with incorrect gender" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.014"/>
+  <testcase name="should return 400 when adding user with existing email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.038"/>
+  <testcase name="should return 200 for getting existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.042"/>
+  <testcase name="should return 400 for getting un existing user by id" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.012"/>
+  <testcase name="should return 200 for getting existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.043"/>
+  <testcase name="should return 400 for getting un existing user by email" classname="com.example.usercrud.presentation.controller.UserControllerTest" time="0.01"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+12:27:06.262 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+12:27:06.530 [Test worker] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+12:27:06.531 [Test worker] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+12:27:06.565 [Test worker] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 20.10.12
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 1988 MB
+12:27:07.191 [Test worker] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+12:27:07.191 [Test worker] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+12:27:07.191 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+12:27:07.269 [Test worker] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker environment should have more than 2GB free disk space
+12:27:07.269 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Creating container for image: postgres:latest
+12:27:07.309 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest is starting: 45d71e5d89b71e7a02996a177acef5f76d2385b225dffb97abf82c14711126c0
+12:27:08.403 [Test worker] INFO  ]]>&#x1f433;<![CDATA[ [postgres:latest] - Container postgres:latest started in PT1.134249S
+12:27:08.414 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Starting UserControllerTest using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 22130 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
+12:27:08.414 [Test worker] INFO  c.e.u.p.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+12:27:08.539 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:27:08.544 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+12:27:08.587 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.590 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.591 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.593 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.594 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.594 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:08.637 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+12:27:08.638 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-2"]
+12:27:08.638 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:27:08.638 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+12:27:08.665 [Test worker] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:27:08.665 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 250 ms
+12:27:08.757 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+12:27:08.841 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+12:27:08.843 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+12:27:08.882 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:27:08.883 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:27:09.621 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure any request
+12:27:09.856 [Test worker] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring TestDispatcherServlet ''
+12:27:09.856 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:27:09.858 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+12:27:09.865 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 9 ms
+12:27:09.875 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-2"]
+12:27:09.876 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 50312 (http) with context path ''
+12:27:09.881 [Test worker] INFO  c.e.u.p.c.UserControllerTest - Started UserControllerTest in 3.642 seconds (JVM running for 8.176)
+12:27:09.945 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: User(id=null, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)org.springframework.validation.BeanPropertyBindingResult: 0 errorsSecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7c3019d6]
+12:27:09.955 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: addUser, arguments: User(id=null, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7c3019d6]
+12:27:09.955 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: existsByEmail, arguments: email@email.email
+12:27:10.016 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:10.034 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:10.041 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <200 OK OK,User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null),[]>
+12:27:10.111 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: UserRequestDto(id=null, firstName=akzhol, lastName=null, middleName=null, country=null, gender=1, email=test@test.test, avatar=org.springframework.mock.web.MockMultipartFile@2b067248)org.springframework.validation.BeanPropertyBindingResult: 0 errorsSecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@22bd3618]
+12:27:10.112 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: addUser, arguments: UserRequestDto(id=null, firstName=akzhol, lastName=null, middleName=null, country=null, gender=1, email=test@test.test, avatar=org.springframework.mock.web.MockMultipartFile@2b067248)SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@22bd3618]
+12:27:10.112 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: existsByEmail, arguments: test@test.test
+12:27:10.115 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:10.886 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=2, firstName=akzhol, lastName=null, middleName=null, country=Kazakhstan, gender=1, email=test@test.test, avatar=https://storage.yandexcloud.net/usercrud-avatars/test@test.test.jpeg)]
+12:27:10.888 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <200 OK OK,User(id=2, firstName=akzhol, lastName=null, middleName=null, country=Kazakhstan, gender=1, email=test@test.test, avatar=https://storage.yandexcloud.net/usercrud-avatars/test@test.test.jpeg),[]>
+12:27:10.903 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: User(id=1, firstName=null, lastName=lastName, middleName=middleName, country=country, gender=1, email=email@email.email, avatar=null)org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'user' on field 'firstName': rejected value [null]; codes [NotEmpty.user.firstName,NotEmpty.firstName,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.firstName,firstName]; arguments []; default message [firstName]]; default message [First name should not be empty]SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@775b68a8]
+12:27:10.904 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{firstName=First name should not be empty},[]>
+12:27:10.915 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=country, gender=1, email=null, avatar=null)org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'user' on field 'email': rejected value [null]; codes [NotEmpty.user.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email]]; default message [Email should not be empty]SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@940fe23]
+12:27:10.915 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{email=Email should not be empty},[]>
+12:27:10.930 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: User(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=country, gender=null, email=email@email.email, avatar=null)org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'user' on field 'gender': rejected value [null]; codes [NotNull.user.gender,NotNull.gender,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.gender,gender]; arguments []; default message [gender]]; default message [must not be null]SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@19fd0299]
+12:27:10.930 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{gender=must not be null},[]>
+12:27:10.950 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: addUser, arguments: User(id=3, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)org.springframework.validation.BeanPropertyBindingResult: 0 errorsSecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1765ca4d]
+12:27:10.950 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: addUser, arguments: User(id=3, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1765ca4d]
+12:27:10.950 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: existsByEmail, arguments: email@email.email
+12:27:10.954 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: true
+12:27:10.954 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:10.956 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{error=User with email email@email.email already exist},[]>
+12:27:10.983 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: addUser, arguments: User(id=3, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)
+12:27:10.984 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: existsByEmail, arguments: email@email.email
+12:27:10.986 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:10.997 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=4, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:11.002 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: getUserById, arguments: 4
+12:27:11.003 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: findById, arguments: 4
+12:27:11.012 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=4, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:11.014 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <200 OK OK,User(id=4, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null),[]>
+12:27:11.022 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: getUserById, arguments: 1
+12:27:11.023 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: findById, arguments: 1
+12:27:11.025 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:11.026 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{error=User with id 1 doesn't exist},[]>
+12:27:11.034 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: addUser, arguments: User(id=3, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)
+12:27:11.034 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: existsByEmail, arguments: email@email.email
+12:27:11.037 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:11.041 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=5, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:11.045 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: getUserByEmail, arguments: email@email.email
+12:27:11.045 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: findByEmail, arguments: email@email.email
+12:27:11.046 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: findByEmail, arguments: email@email.email
+12:27:11.050 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=5, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:11.050 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=5, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null)]
+12:27:11.052 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <200 OK OK,User(id=5, firstName=firstName, lastName=lastName, middleName=middleName, country=Kazakhstan, gender=1, email=email@email.email, avatar=null),[]>
+12:27:11.079 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.presentation.UserController, method name: getUserByEmail, arguments: email@email.email
+12:27:11.079 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: findByEmail, arguments: email@email.email
+12:27:11.079 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: jdk.proxy3.$Proxy174, method name: findByEmail, arguments: email@email.email
+12:27:11.082 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:11.082 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:11.083 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: <400 BAD_REQUEST Bad Request,{error=User with email email@email.email doesn't exist},[]>
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,80 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.usercrud.business.service.UserServiceImplTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-22T13:47:50" hostname="Akzhols-MacBook-Pro.local" time="0.0">
+<testsuite name="com.example.usercrud.business.service.UserServiceImplTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-05-24T06:27:06" hostname="Akzhols-MacBook-Pro.local" time="0.113">
   <properties/>
-  <testcase name="initializationError" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.0">
-    <failure message="org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserServiceImplTest'" type="org.spockframework.util.InternalSpockError">org.spockframework.util.InternalSpockError: Failed to instantiate spec 'UserServiceImplTest'
-	at app//org.spockframework.runtime.PlatformSpecRunner.createSpecInstance(PlatformSpecRunner.java:80)
-	at app//org.spockframework.runtime.PlatformSpecRunner.runSharedSpec(PlatformSpecRunner.java:45)
-	at app//org.spockframework.runtime.SpecNode.prepare(SpecNode.java:32)
-	at app//org.spockframework.runtime.SpecNode.prepare(SpecNode.java:11)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base@17.0.1/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.1/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.ExceptionInInitializerError
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
-	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
-	at java.base/java.lang.Class.newInstance(Class.java:645)
-	at org.spockframework.runtime.PlatformSpecRunner.createSpecInstance(PlatformSpecRunner.java:78)
-	... 51 more
-Caused by: groovy.lang.GroovyRuntimeException: Could not find matching constructor for: com.example.usercrud.business.entity.User(Long, String, String, String, String, Integer, String, null)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1845)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1615)
-	at org.codehaus.groovy.runtime.callsite.MetaClassConstructorSite.callConstructor(MetaClassConstructorSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at com.example.usercrud.business.service.UserServiceImplTest.&lt;clinit&gt;(UserServiceImplTest.groovy:13)
-	... 59 more
-</failure>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="should return false for deleting not existing user by ID" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.079"/>
+  <testcase name="should return true for deleting existing user by ID" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="should return false for deleting not existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="should return true for deleting existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="should return false for checking if user exists for not existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="should return true for checking if user exists for existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="should update not existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.008"/>
+  <testcase name="should update existing user by email" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="should update not existing user by id" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="should update existing user by id" classname="com.example.usercrud.business.service.UserServiceImplTest" time="0.003"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+12:27:02.821 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+12:27:02.821 [Test worker] INFO  c.e.u.b.service.UserServiceImplTest - Starting UserServiceImplTest using Java 17.0.1 on Akzhols-MacBook-Pro.local with PID 22130 (started by rockkstar in /Users/rockkstar/Documents/userCRUD)
+12:27:02.822 [Test worker] INFO  c.e.u.b.service.UserServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+12:27:03.193 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:27:03.216 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+12:27:03.453 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.465 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.468 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.474 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.476 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.487 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:27:03.668 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+12:27:03.673 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+12:27:03.673 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:27:03.673 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+12:27:03.729 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:27:03.729 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 897 ms
+12:27:03.948 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+12:27:03.962 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:27:04.006 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:27:04.095 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:27:04.109 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+12:27:04.299 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:27:04.302 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:27:05.508 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure any request
+12:27:06.026 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+12:27:06.060 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+12:27:06.066 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 50297 (http) with context path ''
+12:27:06.077 [Test worker] INFO  c.e.u.b.service.UserServiceImplTest - Started UserServiceImplTest in 3.352 seconds (JVM running for 4.372)
+12:27:06.151 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.155 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.157 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: deleteById, arguments: 1
+12:27:06.159 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:06.165 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.165 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.165 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: deleteById, arguments: 1
+12:27:06.166 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: true
+12:27:06.168 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.168 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.169 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: deleteByEmail, arguments: email@email.email
+12:27:06.169 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:06.171 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.171 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.171 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: deleteByEmail, arguments: email@email.email
+12:27:06.171 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: true
+12:27:06.174 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.174 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.174 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: existsByEmail, arguments: email@email.email
+12:27:06.175 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: false
+12:27:06.177 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.178 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.178 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: existsByEmail, arguments: email@email.email
+12:27:06.178 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: true
+12:27:06.181 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.181 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.184 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: updateByEmail, arguments: email@email.emailUser(id=1, firstName=firstName, lastName=lastName, middleName=middleName, country=country, gender=1, email=email@email.email, avatar=null)
+12:27:06.185 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:06.189 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.189 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.189 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: updateByEmail, arguments: email@email.emailUser(id=1, firstName=newFirstName, lastName=newLastName, middleName=newMiddleName, country=newCountry, gender=2, email=newEmail@email.email, avatar=null)
+12:27:06.189 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=1, firstName=newFirstName, lastName=newLastName, middleName=newMiddleName, country=newCountry, gender=2, email=newEmail@email.email, avatar=null)]
+12:27:06.192 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.192 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.192 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: updateById, arguments: 1User(id=1, firstName=newFirstName, lastName=newLastName, middleName=newMiddleName, country=newCountry, gender=2, email=newEmail@email.email, avatar=null)
+12:27:06.193 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional.empty
+12:27:06.195 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: setRepository, arguments: Mock for type 'UserRepository' named 'userRepository'
+12:27:06.195 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: null
+12:27:06.195 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Class name: com.example.usercrud.business.service.UserServiceImpl, method name: updateById, arguments: 1User(id=null, firstName=newFirstName, lastName=newLastName, middleName=newMiddleName, country=newCountry, gender=2, email=newEmail@email.email, avatar=null)
+12:27:06.196 [Test worker] INFO  c.e.u.business.aspect.LoggingAspect - Returning value: Optional[User(id=1, firstName=newFirstName, lastName=newLastName, middleName=newMiddleName, country=newCountry, gender=2, email=newEmail@email.email, avatar=null)]
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
