@@ -2162,7 +2162,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4311 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' via constructor to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
 4312 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repositoryTagsProvider'
 4314 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsRepositoryMethodInvocationListener' via factory method to bean named 'repositoryTagsProvider'
-4329 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepository…
+4329 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate…
 4335 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
 4365 [Test worker] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findAllByCountry
 4366 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
@@ -2184,7 +2184,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4385 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 4385 [Test worker] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.deleteByEmail
 4385 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
-4387 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepository.
+4387 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate.
 4396 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'restTemplate'
 4423 [Test worker] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [/Users/rockkstar/Documents/userCRUD/build/classes/java/main/com/example/usercrud/business/service/UserServiceImpl.class]: Initialization of bean failed; nested exception is org.springframework.cglib.core.CodeGenerationException: java.lang.ClassFormatError-->Duplicate method name "newInstance" with signature "([Lorg.springframework.cglib.proxy.Callback;)Ljava.lang.Object;" in class file com/example/usercrud/business/service/UserServiceImpl$$EnhancerBySpringCGLIB$$dae52593$$EnhancerByCGLIB$$5026763f
 4423 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

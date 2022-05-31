@@ -2162,7 +2162,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4400 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' via constructor to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
 4402 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repositoryTagsProvider'
 4403 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsRepositoryMethodInvocationListener' via factory method to bean named 'repositoryTagsProvider'
-4421 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepository…
+4421 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate…
 4428 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
 4460 [Test worker] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findAllByCountry
 4462 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
@@ -2184,7 +2184,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4483 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 4483 [Test worker] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.deleteByEmail
 4483 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
-4484 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepository.
+4484 [Test worker] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate.
 4494 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'restTemplate'
 4521 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userController'
 4524 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'

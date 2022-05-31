@@ -664,7 +664,7 @@ jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
 1941 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' via constructor to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
 1941 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repositoryTagsProvider'
 1942 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsRepositoryMethodInvocationListener' via factory method to bean named 'repositoryTagsProvider'
-1955 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepository…
+1955 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate…
 1959 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
 1986 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findAllByCountry
 1987 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
@@ -690,7 +690,7 @@ jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
 2001 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 2001 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.getByEmail
 2001 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
-2003 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepository.
+2003 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate.
 2011 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'restTemplate'
 2025 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'getAWSS3'
 2068 [main] DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true

@@ -2071,7 +2071,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 4955 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' via constructor to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
 4956 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repositoryTagsProvider'
 4958 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsRepositoryMethodInvocationListener' via factory method to bean named 'repositoryTagsProvider'
-4974 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepository…
+4974 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate…
 4981 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
 5014 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findAllByCountry
 5015 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
@@ -2097,7 +2097,7 @@ org.postgresql.util.PSQLWarning: table "users" does not exist, skipping
 5038 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
 5038 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.getByEmail
 5038 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
-5040 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepository.
+5040 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.usercrud.persistance.repository.UserRepositoryHibernate.
 5045 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'restTemplate'
 5065 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'getAWSS3'
 5126 [main] DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true

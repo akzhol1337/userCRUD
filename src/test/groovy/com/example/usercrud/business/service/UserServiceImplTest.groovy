@@ -1,7 +1,7 @@
 package com.example.usercrud.business.service
 
 import com.example.usercrud.business.entity.User
-import com.example.usercrud.persistance.repository.UserRepository
+import com.example.usercrud.persistance.repository.UserRepositoryHibernate
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.web.client.RestTemplate
@@ -13,7 +13,7 @@ class UserServiceImplTest extends Specification {
     private static final testUser = new User(1L, "firstName", "lastName", "middleName", "country", 1, "email@email.email", null)
 
     def restTemplate = Mock(RestTemplate)
-    def userRepository = Mock(UserRepository)
+    def userRepository = Mock(UserRepositoryHibernate)
 
     @Autowired
     UserService userService;

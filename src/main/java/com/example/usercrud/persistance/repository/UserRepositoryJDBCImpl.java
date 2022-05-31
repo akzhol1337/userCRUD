@@ -13,9 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 @RequiredArgsConstructor
-public class UserRepositoryJDBC implements IUserRepositoryJDBC{
+public class UserRepositoryJDBCImpl implements UserRepository {
     private final Connection connection;
 
     @Override
@@ -161,7 +160,7 @@ public class UserRepositoryJDBC implements IUserRepositoryJDBC{
     }
 
     @Override
-    public Boolean existsById(Long id) {
+    public boolean existsById(Long id) {
         boolean exists = false;
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE id=?");

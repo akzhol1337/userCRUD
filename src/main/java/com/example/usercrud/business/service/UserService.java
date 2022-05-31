@@ -2,9 +2,7 @@ package com.example.usercrud.business.service;
 
 import com.example.usercrud.business.entity.User;
 import com.example.usercrud.business.entity.UserRequestDto;
-import com.example.usercrud.persistance.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;

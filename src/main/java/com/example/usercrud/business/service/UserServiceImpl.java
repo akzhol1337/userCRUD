@@ -3,22 +3,17 @@ package com.example.usercrud.business.service;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.example.usercrud.business.entity.UserRequestDto;
 import com.example.usercrud.business.entity.annotations.Loggable;
 import com.example.usercrud.business.entity.annotations.Metric;
 import com.example.usercrud.business.entity.User;
-import com.example.usercrud.persistance.repository.IUserRepositoryJDBC;
 import com.example.usercrud.persistance.repository.UserRepository;
-import com.example.usercrud.persistance.repository.UserRepositoryJDBC;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.apache.commons.codec.binary.Base64;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,10 +21,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -42,7 +35,7 @@ import java.util.Optional;
 @Data
 public class UserServiceImpl implements UserService{
     @Autowired
-    private IUserRepositoryJDBC userRepo;
+    private UserRepository userRepo;
     @Autowired
     private RestTemplate restTemplate;
     @Autowired

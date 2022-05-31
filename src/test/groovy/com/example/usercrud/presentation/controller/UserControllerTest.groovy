@@ -1,21 +1,17 @@
 package com.example.usercrud.presentation.controller
 
-import com.amazonaws.util.IOUtils
+
 import com.example.usercrud.business.entity.User
 import com.example.usercrud.business.service.UserService
-import com.example.usercrud.business.service.UserServiceImpl
-import com.example.usercrud.persistance.repository.UserRepository
+import com.example.usercrud.persistance.repository.UserRepositoryHibernate
 import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.json.JsonSlurper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.core.io.ClassPathResource
-import org.springframework.core.io.Resource
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.mock.web.MockMultipartFile
-import org.springframework.security.access.annotation.Secured
 import org.springframework.security.test.context.support.WithMockUser
 import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.context.DynamicPropertySource
@@ -25,7 +21,6 @@ import org.springframework.web.multipart.MultipartFile
 import org.testcontainers.containers.PostgreSQLContainer
 import spock.lang.Shared
 import spock.lang.Specification
-import spock.lang.Unroll
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
@@ -57,7 +52,7 @@ class UserControllerTest extends Specification {
     private MockMvc mockMvc
 
     @Autowired
-    private UserRepository userRepository
+    private UserRepositoryHibernate userRepository
 
     @DynamicPropertySource
     static void overrideProps(DynamicPropertyRegistry registry) {
