@@ -57,8 +57,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE email=?");
             statement.setString(1, email);
-            ResultSet resultSet = statement.executeQuery();
-            exists = resultSet.next();
+            exists = statement.execute();
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -165,8 +164,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE id=?");
             statement.setLong(1, id);
-            ResultSet resultSet = statement.executeQuery();
-            exists = resultSet.next();
+            exists = statement.execute();
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
