@@ -1,0 +1,5 @@
+jdbc:
+  driverName: org.postgresql.Driver
+  connectionURL: jdbc:postgresql://localhost:5432/database
+server:
+  port: 80

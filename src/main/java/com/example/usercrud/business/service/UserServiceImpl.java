@@ -23,6 +23,7 @@ import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -41,16 +42,20 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private AmazonS3 s3Client;
 
-    public Optional<User> addUser(User user) {
+    public Optional<User> addUser(User user)  {
         Optional<User> newUser = Optional.empty();
-        if (!userRepo.existsByEmail(user.getEmail())) {
-            newUser = Optional.of(userRepo.save(user));
+        try {
+            if (!userRepo.existsByEmail(user.getEmail())) {
+                newUser = Optional.of(userRepo.save(user));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return newUser;
     }
 
 
-    public String getCountryByHttpServletRequest(HttpServletRequest request) throws JsonProcessingException {
+    public String getCountryByHttpServletRequest(HttpServletRequest request) {
         String userIP = request.getRemoteAddr();
         if (Objects.equals(userIP, "0:0:0:0:0:0:0:1") || Objects.equals(userIP, "127.0.0.1")) {
             return "Kazakhstan";
@@ -58,11 +63,14 @@ public class UserServiceImpl implements UserService{
             String result = restTemplate.getForObject("http://ip-api.com/json/" + userIP + "?fields=status,country",
                 String.class);
             ObjectMapper mapper = new ObjectMapper();
-            Map map = mapper.readValue(result, Map.class);
-            if (map.get("status").equals("fail")) {
-                return "Kazakhstan";
-            } else {
+            try {
+                Map map = mapper.readValue(result, Map.class);
+                if (map.get("status").equals("fail")) {
+                    return "Kazakhstan";
+                }
                 return (String) map.get("country");
+            } catch (JsonProcessingException e) {
+                return "undefined";
             }
         }
     }
@@ -98,8 +106,12 @@ public class UserServiceImpl implements UserService{
         return "https://storage.yandexcloud.net/usercrud-avatars/" + userEmail + extension;
     }
 
-    public Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException {
-        if(userRepo.existsByEmail(user.getEmail())) {
+    public Optional<User> addUser(User user, HttpServletRequest request) {
+        try {
+            if (userRepo.existsByEmail(user.getEmail())) {
+                return Optional.empty();
+            }
+        } catch (Exception e) {
             return Optional.empty();
         }
         user.setCountry(getCountryByHttpServletRequest(request));
@@ -110,51 +122,88 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request) throws IOException {
-        if(userRepo.existsByEmail(userRequestDto.getEmail())) {
+    public Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request) {
+        try {
+            if (userRepo.existsByEmail(userRequestDto.getEmail())) {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
             return Optional.empty();
         }
         User user = new User(userRequestDto);
         user.setCountry(getCountryByHttpServletRequest(request));
 
         if(userRequestDto.getAvatar() != null) {
-            user.setAvatar(getUserAvatarLinkAWSS3(userRequestDto.getAvatar(), userRequestDto.getEmail()));
+            try {
+                user.setAvatar(getUserAvatarLinkAWSS3(userRequestDto.getAvatar(), userRequestDto.getEmail()));
+            } catch (IOException e) {
+                user.setAvatar("https://static.wikia.nocookie.net/fnaf-fanon-animatronics/images/4/40/Банан.png/revision/latest?cb=20190614113143&path-prefix=ru");
+            }
         }
         return Optional.of(userRepo.save(user));
     }
 
     @Metric(name="retrieveById")
-    public Optional<User> findById(Long id) {
-        return userRepo.findById(id);
+    public Optional<User> findById(Long id){
+        try {
+            return userRepo.findById(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
     }
 
     public Optional<User> findByEmail(String email) {
-        return userRepo.findByEmail(email);
+        try {
+            return userRepo.findByEmail(email);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
     }
 
-    public Boolean deleteById(Long id) {
-        if (userRepo.existsById(id)) {
-            userRepo.deleteById(id);
-            return true;
+    public Boolean deleteById(Long id){
+        try {
+            if (userRepo.existsById(id)) {
+                userRepo.deleteById(id);
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return false;
     }
 
     public Boolean deleteByEmail(String email) {
-        if (userRepo.existsByEmail(email)) {
-            userRepo.deleteByEmail(email);
-            return true;
+        try {
+            if (userRepo.existsByEmail(email)) {
+                userRepo.deleteByEmail(email);
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return false;
     }
 
     public boolean existsByEmail(String email) {
-        return userRepo.existsByEmail(email);
+        try {
+            return userRepo.existsByEmail(email);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public Optional<User> updateByEmail(String email, User newUser) {
-        Optional<User> user = userRepo.findByEmail(email);
-
+        Optional<User> user;
+        try {
+            user = userRepo.findByEmail(email);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
         if(user.isEmpty()) {
             return Optional.empty();
         }
@@ -179,19 +228,35 @@ public class UserServiceImpl implements UserService{
 //    }
 
     public List<User> getAllByCountry(String country) {
-        return userRepo.findAllByCountry(country);
+        try {
+            return userRepo.findAllByCountry(country);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 //    public Page<User> getPage(Integer pageNumber, Integer pageSize) {
 //        return userRepo.findAll(PageRequest.of(pageNumber, pageSize));
 //    }
 
-    public List<User> getAll() {
-        return userRepo.findAll();
+    public List<User> getAll(){
+        try {
+            return userRepo.findAll();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public Optional<User> updateById(Long id, User newUser) {
-        Optional<User> user = userRepo.findById(id);
+        Optional<User> user = null;
+        try {
+            user = userRepo.findById(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
         if(user.isEmpty()) {
             return Optional.empty();
         }

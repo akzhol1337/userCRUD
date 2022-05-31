@@ -1,0 +1,5 @@
+jdbc:
+  driverName: org.h2.Driver
+  connectionURL: jdbc:h2:file:./src/main/java/com/example/usercrud/Database/Database
+server:
+  port: 8080

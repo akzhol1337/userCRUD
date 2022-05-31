@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +17,9 @@ import java.util.Optional;
 public interface UserService {
     Optional<User> addUser(User user);
 
-    Optional<User> addUser(User user, HttpServletRequest request) throws JsonProcessingException;
+    Optional<User> addUser(User user, HttpServletRequest request);
 
-    Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request) throws IOException;
+    Optional<User> addUser(UserRequestDto userRequestDto, HttpServletRequest request);
 
     Optional<User> findById(Long id);
 
