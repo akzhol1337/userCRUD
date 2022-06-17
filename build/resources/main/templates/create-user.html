@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script th:inline="javascript">
+        let base64 = null
+        async function addUser() {
+            let user = {
+                'firstName': $('#firstName').val(),
+                'lastName': $('#lastName').val(),
+                'middleName': $('#middleName').val(),
+                'country': $('#country').val(),
+                'gender': parseInt($('#gender').val()),
+                'email': $('#email').val(),
+                'avatar': base64,
+                'password': $('#pass').val()
+            }
+
+             $.post({
+                 url: 'http://localhost:8080/user',
+                 data: JSON.stringify(user),
+                 contentType: 'application/json; charset=utf-8'
+             }).done(function (response) {
+                 console.log(response)
+             })
+
+
+        }
+
+
+        function encodeImageFileAsURL(element) {
+            var file = element.files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                base64 = reader.result
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>
+</head>
+<body>
+first name:<input type="text" id="firstName"><br>
+last name: <input type="text" id="lastName"><br>
+middle name: <input type="text" id="middleName"><br>
+country: <input type="text" id="country"><br>
+gender: <input type="text" id="gender"><br>
+email: <input type="text" id="email"><br>
+avatar: <input type="file" id="avatar" onchange="encodeImageFileAsURL(this)"><br>
+password: <input type="password" id="pass"><br>
+<input type="submit" value="Add" onclick="addUser()"><br>
+
+
+</body>
+</html>

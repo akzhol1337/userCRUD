@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cloud.folium.usercrud.integration.UserControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-06-17T03:39:45" hostname="Akzhols-MBP.Dlink" time="6.886">
+  <properties/>
+  <testcase name="Then: is started" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.503"/>
+  <testcase name="Then: http response be with status code 200, and returned user should match with sent user" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.044"/>
+  <testcase name="Then: response should be with status code 400, and message `First name should not be empty`" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.037"/>
+  <testcase name="Then: response should be with status code 400" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.022"/>
+  <testcase name="Then: response should be with status code 400" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.028"/>
+  <testcase name="Then: response should be with status code 400" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.012"/>
+  <testcase name="Then: response should be with status code 200, and returned user should match with sent user" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.017"/>
+  <testcase name="Then: response should be with status code 400, and error message" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.012"/>
+  <testcase name="Then: response should be with status code 200, and returned user should match with sent user" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.019"/>
+  <testcase name="Then: response should be with status code 400, and error message" classname="cloud.folium.usercrud.integration.UserControllerTest" time="0.02"/>
+  <system-out><![CDATA[08:39:38.465 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:39:38.472 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:39:38.492 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [cloud.folium.usercrud.integration.UserControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+08:39:38.497 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [cloud.folium.usercrud.integration.UserControllerTest], using SpringBootContextLoader
+08:39:38.499 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [cloud.folium.usercrud.integration.UserControllerTest]: class path resource [cloud/folium/usercrud/integration/UserControllerTest-context.xml] does not exist
+08:39:38.500 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [cloud.folium.usercrud.integration.UserControllerTest]: class path resource [cloud/folium/usercrud/integration/UserControllerTestContext.groovy] does not exist
+08:39:38.500 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [cloud.folium.usercrud.integration.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:39:38.500 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Ignoring class [cloud.folium.usercrud.integration.UserControllerTest$Companion]; it must be static, non-private, non-final, and annotated with @Configuration to be considered a default configuration class.
+08:39:38.500 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [cloud.folium.usercrud.integration.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:39:38.535 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [cloud.folium.usercrud.integration.UserControllerTest]
+08:39:38.567 [Test worker @coroutine#2] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/rockkstar/Downloads/userCrudKotlin-main/Downloads/usercrud/build/classes/kotlin/main/cloud/folium/usercrud/UserСrudApplication.class]
+08:39:38.568 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration cloud.folium.usercrud.UserСrudApplication for test class cloud.folium.usercrud.integration.UserControllerTest
+08:39:38.639 [Test worker @coroutine#2] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [cloud.folium.usercrud.integration.UserControllerTest]: using defaults.
+08:39:38.639 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [com.ninjasquad.springmockk.MockkTestExecutionListener, com.ninjasquad.springmockk.ClearMocksTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+08:39:38.656 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24134cbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65da01f4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@22f02996, com.ninjasquad.springmockk.MockkTestExecutionListener@7c8874ef, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42c0a16e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77a0dd63, org.springframework.test.context.support.DirtiesContextTestExecutionListener@543fe698, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6b2fdffc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ca3d826, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5d194314, org.springframework.test.context.event.EventPublishingTestExecutionListener@76396509, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@637c840d, com.ninjasquad.springmockk.ClearMocksTestExecutionListener@51ac12ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@463afa6e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7b96de8d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7ccd611e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4dc52559, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5c3d4f05, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@119290b9]
+08:39:38.659 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@691567ea testClass = UserControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cfed0ba testClass = UserControllerTest, locations = '{}', classes = '{class cloud.folium.usercrud.UserСrudApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[MockkContextCustomizer(definitions=[]), org.springframework.test.context.support.DynamicPropertiesContextCustomizer@aebd589e, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5809fa26, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@523a7801, [ImportsContextCustomizer@5c8d58ed key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@764b14b8, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@f5a7226, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@ee21292, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@285583d4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.0)
+
+2022-06-17 08:39:38.867  INFO 99194 --- [er @coroutine#2] c.f.u.integration.UserControllerTest     : Starting UserControllerTest using Java 17.0.1 on Akzhols-MBP.Dlink with PID 99194 (started by rockkstar in /Users/rockkstar/Downloads/userCrudKotlin-main/Downloads/usercrud)
+2022-06-17 08:39:38.868  INFO 99194 --- [er @coroutine#2] c.f.u.integration.UserControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2022-06-17 08:39:39.810  INFO 99194 --- [er @coroutine#2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-17 08:39:39.863  INFO 99194 --- [er @coroutine#2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2022-06-17 08:39:40.764  INFO 99194 --- [er @coroutine#2] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-17 08:39:40.800  INFO 99194 --- [er @coroutine#2] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-17 08:39:40.907  INFO 99194 --- [er @coroutine#2] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-17 08:39:40.980  INFO 99194 --- [er @coroutine#2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-17 08:39:41.185  INFO 99194 --- [er @coroutine#2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-17 08:39:41.199  INFO 99194 --- [er @coroutine#2] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-17 08:39:41.226  WARN 99194 --- [er @coroutine#2] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@42684d86 marked as broken because of SQLSTATE(0A000), ErrorCode(0)
+
+java.sql.SQLFeatureNotSupportedException: Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
+	at org.postgresql.Driver.notImplemented(Driver.java:699) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.jdbc.PgConnection.createClob(PgConnection.java:1347) ~[postgresql-42.3.5.jar:42.3.5]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.createClob(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation(LobCreatorBuilderImpl.java:121) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.makeLobCreatorBuilder(LobCreatorBuilderImpl.java:56) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl.<init>(JdbcEnvironmentImpl.java:286) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-2.7.0.jar:2.7.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.21.jar:5.3.21]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.21.jar:5.3.21]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.21.jar:5.3.21]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.21.jar:5.3.21]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.21.jar:5.3.21]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.21.jar:5.3.21]
+	at io.kotest.extensions.spring.SpringTestExtension$intercept$2.invokeSuspend(SpringTestExtension.kt:60) ~[kotest-extensions-spring-1.1.0.jar:na]
+	at io.kotest.extensions.spring.SpringTestExtension$intercept$2.invoke(SpringTestExtension.kt) ~[kotest-extensions-spring-1.1.0.jar:na]
+	at io.kotest.extensions.spring.SpringTestExtension$intercept$2.invoke(SpringTestExtension.kt) ~[kotest-extensions-spring-1.1.0.jar:na]
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at io.kotest.extensions.spring.SpringTestExtension.intercept(SpringTestExtension.kt:58) ~[kotest-extensions-spring-1.1.0.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1$1.invokeSuspend(SpecExtensions.kt:148) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1$1.invoke(SpecExtensions.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1$1.invoke(SpecExtensions.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.core.extensions.SpecExtension$DefaultImpls.intercept(SpecExtension.kt:31) ~[kotest-framework-api-jvm-5.3.1.jar:na]
+	at io.kotest.extensions.spring.SpringTestExtension.intercept(SpringTestExtension.kt:49) ~[kotest-extensions-spring-1.1.0.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1.invokeSuspend(SpecExtensions.kt:147) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1.invoke(SpecExtensions.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExtensions$intercept$chain$1$1.invoke(SpecExtensions.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExtensions.intercept(SpecExtensions.kt:154) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecExtensionInterceptor.intercept-0E7RQCE(SpecExtensionInterceptor.kt:21) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invokeSuspend(SpecExecutor.kt:116) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.ProjectContextInterceptor$intercept$2.invokeSuspend(ProjectContextInterceptor.kt:21) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.ProjectContextInterceptor$intercept$2.invoke(ProjectContextInterceptor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.ProjectContextInterceptor$intercept$2.invoke(ProjectContextInterceptor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at io.kotest.engine.spec.interceptor.ProjectContextInterceptor.intercept-0E7RQCE(ProjectContextInterceptor.kt:20) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invokeSuspend(SpecExecutor.kt:116) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$specInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor.specInterceptors-gIAlu-s(SpecExecutor.kt:117) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor.access$specInterceptors-gIAlu-s(SpecExecutor.kt:48) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invokeSuspend(SpecExecutor.kt:85) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.FinalizeSpecInterceptor.intercept-0E7RQCE(FinalizeSpecInterceptor.kt:19) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.PrepareSpecInterceptor.intercept-0E7RQCE(PrepareSpecInterceptor.kt:20) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.ApplyExtensionsInterceptor.intercept-0E7RQCE(ApplyExtensionsInterceptor.kt:35) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecFinishedInterceptor.intercept-0E7RQCE(SpecFinishedInterceptor.kt:21) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecStartedInterceptor.intercept-0E7RQCE(SpecStartedInterceptor.kt:19) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invokeSuspend(SpecRefExtensionInterceptor.kt:27) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor.intercept-0E7RQCE(SpecRefExtensionInterceptor.kt:30) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.RequiresTagSpecInterceptor.intercept-0E7RQCE(RequiresTagSpecInterceptor.kt:35) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.TagsExcludedSpecInterceptor.intercept-0E7RQCE(TagsExcludedDiscoveryExtension.kt:32) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SystemPropertySpecFilterInterceptor.intercept-0E7RQCE(SystemPropertySpecFilterInterceptor.kt:49) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.SpecFilterInterceptor.intercept-0E7RQCE(SpecFilterInterceptor.kt:37) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.IgnoredSpecInterceptor.intercept-0E7RQCE(IgnoredSpecInterceptor.kt:42) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.interceptor.EnabledIfSpecInterceptor.intercept-0E7RQCE(EnabledIfSpecInterceptor.kt:40) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor.referenceInterceptors(SpecExecutor.kt:91) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.spec.SpecExecutor.execute(SpecExecutor.kt:60) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.engine.ConcurrentTestSuiteScheduler$schedule$8$1$2.invokeSuspend(ConcurrentTestSuiteScheduler.kt:71) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33) ~[kotlin-stdlib-1.6.21.jar:1.6.21-release-334(1.6.21)]
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:279) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source) ~[kotlinx-coroutines-core-jvm-1.6.1.jar:na]
+	at io.kotest.common.RunBlockingKt.runBlocking(runBlocking.kt:3) ~[kotest-common-jvm-5.3.1.jar:na]
+	at io.kotest.engine.TestEngineLauncher.launch(TestEngineLauncher.kt:194) ~[kotest-framework-engine-jvm-5.3.1.jar:na]
+	at io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:82) ~[kotest-runner-junit5-jvm-5.3.1.jar:na]
+	at io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:46) ~[kotest-runner-junit5-jvm-5.3.1.jar:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+Hibernate: 
+    
+    create table users (
+       id bigint generated by default as identity,
+        avatar varchar(255),
+        country TEXT,
+        email varchar(255),
+        first_name TEXT,
+        gender SMALLINT not null check (gender>=0 AND gender<=10),
+        last_name TEXT,
+        middle_name TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    
+    alter table users 
+       drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
+2022-06-17 08:39:41.768  WARN 99194 --- [er @coroutine#2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2022-06-17 08:39:41.768  WARN 99194 --- [er @coroutine#2] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+Hibernate: 
+    
+    alter table users 
+       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2022-06-17 08:39:41.771  INFO 99194 --- [er @coroutine#2] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-17 08:39:41.776  INFO 99194 --- [er @coroutine#2] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-17 08:39:41.847  WARN 99194 --- [er @coroutine#2] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-17 08:39:43.648  WARN 99194 --- [er @coroutine#2] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-17 08:39:43.648  INFO 99194 --- [er @coroutine#2] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2022-06-17 08:39:43.720  INFO 99194 --- [er @coroutine#2] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d44f15d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@674c9079, org.springframework.security.web.context.SecurityContextPersistenceFilter@d332ebc, org.springframework.security.web.header.HeaderWriterFilter@22f3b213, org.springframework.security.web.authentication.logout.LogoutFilter@ff7042c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1377e395, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ec0c727, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a654f27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b5854a7, org.springframework.security.web.session.SessionManagementFilter@2cf7860e, org.springframework.security.web.access.ExceptionTranslationFilter@655e3f4c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a59f3d9]
+2022-06-17 08:39:44.265  INFO 99194 --- [er @coroutine#2] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:53284/postgres?loggerLevel=OFF'
+2022-06-17 08:39:44.764  INFO 99194 --- [er @coroutine#2] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-06-17 08:39:44.764  INFO 99194 --- [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-06-17 08:39:44.765  INFO 99194 --- [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-06-17 08:39:44.782  INFO 99194 --- [er @coroutine#2] c.f.u.integration.UserControllerTest     : Started UserControllerTest in 6.106 seconds (JVM running for 14.966)
+WARN: Duplicated test name existing user. To disable this message, set DuplicateTestNameMode to None.
+WARN: Duplicated test name unexisting user. To disable this message, set DuplicateTestNameMode to None.
+WARN: Duplicated test name existing user. To disable this message, set DuplicateTestNameMode to None.
+WARN: Duplicated test name unexisting user. To disable this message, set DuplicateTestNameMode to None.
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+abcdefg
+Hibernate: 
+    select
+        user0_.id as col_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=? limit ?
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (id, avatar, country, email, first_name, gender, last_name, middle_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (id, avatar, country, email, first_name, gender, last_name, middle_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?, ?)
+abcdefg
+Hibernate: 
+    select
+        user0_.id as col_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=? limit ?
+hhj {"error":"User with email email@email.email already exist"}
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as col_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=? limit ?
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (id, avatar, country, email, first_name, gender, last_name, middle_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as col_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=? limit ?
+Hibernate: 
+    select
+        user0_.id as id1_0_0_,
+        user0_.avatar as avatar2_0_0_,
+        user0_.country as country3_0_0_,
+        user0_.email as email4_0_0_,
+        user0_.first_name as first_na5_0_0_,
+        user0_.gender as gender6_0_0_,
+        user0_.last_name as last_nam7_0_0_,
+        user0_.middle_name as middle_n8_0_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (id, avatar, country, email, first_name, gender, last_name, middle_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_ 
+    where
+        user0_.email=?
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.avatar as avatar2_0_,
+        user0_.country as country3_0_,
+        user0_.email as email4_0_,
+        user0_.first_name as first_na5_0_,
+        user0_.gender as gender6_0_,
+        user0_.last_name as last_nam7_0_,
+        user0_.middle_name as middle_n8_0_ 
+    from
+        users user0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
